@@ -80,50 +80,6 @@ html, body {
 }
 
 
-// .main-bio__img {
-// 	position: relative;
-// 	width: 100%;
-
-// 	.main-bio__img-band {
-// 		position: absolute;
-// 		width: 80%;
-// 	}
-// }
-
-
-// .bio {
-//   box-sizing: border-box;
-
-//   &-title {
-//     @include bold-header_mobile;
-// 		padding: 1rem;
-//   }
-
-//   &-content {
-// 		padding: 0 1rem;
-// 		display: flex;
-// 		flex-direction: column;
-// 		box-sizing: border-box;
-//   }
-
-//   &-image {
-//     position: relative;
-//     width: 100%;
-
-//     &__img {
-//       position: absolute;
-//       width: 100%;
-//       height: auto;
-//     }
-//   }
-
-// 	&-caption {
-// 		padding-top: 1rem;
-// 		font-size: 1rem;
-// 		line-height: 1.5;
-// 	}
-// }
-
 .bio {
   box-sizing: border-box;
 
@@ -136,6 +92,12 @@ html, body {
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
+
+		&__caption {
+			font-size: 14px;
+			line-height: 22px;
+			font-weight: 600;
+		}
 
     &-image {
       position: relative;
@@ -151,3 +113,9 @@ html, body {
 }
 
 
+
+// .bio-caption {
+// 	font-size: 14px;
+// 	line-height: 22px;
+// 	font-weight: 600;
+// }

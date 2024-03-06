@@ -108,6 +108,11 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+.bio-content__caption {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
 .bio-content-image {
   position: relative;
   width: 100%;
