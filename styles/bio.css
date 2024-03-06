@@ -23,6 +23,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .site-header {
@@ -80,8 +81,18 @@ html, body {
   display: flex;
   height: 15rem;
 }
-.banner-title {
-  color: white;
-  justify-items: center;
-  vertical-align: middle;
+
+.main {
+  margin: 0 2rem;
+}
+.main-bio {
+  padding-top: 0.5rem;
+}
+.main-bio__img {
+  position: relative;
+  width: 100%;
+}
+.main-bio__img-band {
+  position: absolute;
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */

@@ -10,6 +10,7 @@
 html, body {
   margin: 0;
   padding: 0;
+	width: 100%;
 }
 
 .site-header {
@@ -68,9 +69,36 @@ html, body {
   display: flex;
   height: 15rem;
 
-  &-title {
-    color: white;
-    justify-items: center;
-    vertical-align: middle;
-  }
+  // &-title {
+  //   color: white;
+  //   justify-items: center;
+  //   vertical-align: middle;
+  // }
 }
+
+.main {
+	margin: 0 2rem;
+	// padding: 1.5rem 0 1rem 0;
+
+	&-bio {
+		padding-top: 0.5rem;
+		// padding-bottom: 1rem;
+		&__img {
+			position: relative;
+			width: 100%;
+			&-band {
+				position: absolute;
+				width: 100%;
+			}
+		}
+	}
+}
+// .main-bio__img {
+// 	position: relative;
+// 	width: 100%;
+
+// 	.main-bio__img-band {
+// 		position: absolute;
+// 		width: 100%;
+// 	}
+// }
