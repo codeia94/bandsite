@@ -11,18 +11,20 @@ html, body {
   margin: 0;
   padding: 0;
 	width: 100%;
+	font-family: 'Avenir Next';
 }
 
 .site-header {
   background: #323232;
   width: 100%;
-    
+	@include bold-header_mobile;
+
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 767px;
-        
+
     @include tablet {
       flex-direction: row;
       justify-content: flex-start;
@@ -34,6 +36,7 @@ html, body {
   color: white;
   text-decoration: none;
   display: inline-flex;
+	padding-top: 1rem;
 }
 
 .primary-nav {
@@ -67,38 +70,84 @@ html, body {
   background-position: center;
   background-size: cover;
   display: flex;
+	align-items: center;  
   height: 15rem;
 
-  // &-title {
-  //   color: white;
-  //   justify-items: center;
-  //   vertical-align: middle;
-  // }
+  &-title {
+		@include bold-header_mobile;
+    color: white;
+  }
 }
 
-.main {
-	margin: 0 2rem;
-	// padding: 1.5rem 0 1rem 0;
 
-	&-bio {
-		padding-top: 0.5rem;
-		// padding-bottom: 1rem;
-		&__img {
-			position: relative;
-			width: 100%;
-			&-band {
-				position: absolute;
-				width: 100%;
-			}
-		}
-	}
-}
 // .main-bio__img {
 // 	position: relative;
 // 	width: 100%;
 
 // 	.main-bio__img-band {
 // 		position: absolute;
-// 		width: 100%;
+// 		width: 80%;
 // 	}
 // }
+
+
+// .bio {
+//   box-sizing: border-box;
+
+//   &-title {
+//     @include bold-header_mobile;
+// 		padding: 1rem;
+//   }
+
+//   &-content {
+// 		padding: 0 1rem;
+// 		display: flex;
+// 		flex-direction: column;
+// 		box-sizing: border-box;
+//   }
+
+//   &-image {
+//     position: relative;
+//     width: 100%;
+
+//     &__img {
+//       position: absolute;
+//       width: 100%;
+//       height: auto;
+//     }
+//   }
+
+// 	&-caption {
+// 		padding-top: 1rem;
+// 		font-size: 1rem;
+// 		line-height: 1.5;
+// 	}
+// }
+
+.bio {
+  box-sizing: border-box;
+
+  &-title {
+    @include bold-header_mobile;
+    padding: 1rem;
+  }
+
+  &-content {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+
+    &-image {
+      position: relative;
+      width: 100%;
+
+      &__img {
+      	width: 100%;
+        height: auto;
+				display: block;
+      }
+    }
+  }
+}
+
+

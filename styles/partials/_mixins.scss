@@ -14,5 +14,9 @@
   }
 }
 
-
+@mixin bold-header-mobile {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-weight: 700;
+}
 
