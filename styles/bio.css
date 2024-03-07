@@ -119,9 +119,42 @@ html, body {
 .bio-content-image__img {
   width: 100%;
   height: auto;
-  display: block;
 }
 .bio .article-content__title {
   font-size: 14px;
   line-height: 22px;
+}
+
+.card-section {
+  background-color: #FAFAFA;
+  padding: 1rem;
+}
+.card-section__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.card-section__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.card-image {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card {
+    width: 30%;
+  }
 }/*# sourceMappingURL=bio.css.map */
