@@ -114,11 +114,14 @@ html, body {
   font-weight: 600;
 }
 .bio-content-image {
-  position: relative;
   width: 100%;
 }
 .bio-content-image__img {
   width: 100%;
   height: auto;
   display: block;
+}
+.bio .article-content__title {
+  font-size: 14px;
+  line-height: 22px;
 }/*# sourceMappingURL=bio.css.map */

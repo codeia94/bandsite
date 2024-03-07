@@ -20,3 +20,8 @@
 	font-weight: 700;
 }
 
+@mixin body-footer_mobile {
+	font-size: .8125rem;
+	line-height: 1.125rem;
+	font-weight: 400;
+}

@@ -100,22 +100,27 @@ html, body {
 		}
 
     &-image {
-      position: relative;
+      // position: relative;
       width: 100%;
 
       &__img {
+				// position: absolute;
       	width: 100%;
         height: auto;
 				display: block;
       }
     }
   }
+
+	.article {
+	
+		&-content {
+	
+			&__title {
+				font-size: 14px;
+				line-height: 22px;
+			}
+		}
+	}
 }
 
-
-
-// .bio-caption {
-// 	font-size: 14px;
-// 	line-height: 22px;
-// 	font-weight: 600;
-// }
