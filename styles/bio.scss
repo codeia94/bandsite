@@ -196,5 +196,11 @@ html, body {
 	@include desktop {
 		width: 30%;
 	}
-	
+}
+
+footer {
+	background-color: #323232;
+	color: white;
+	display: flex;
+	flex-direction: column;
 }

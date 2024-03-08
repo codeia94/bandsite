@@ -184,4 +184,11 @@ html, body {
   .card {
     width: 30%;
   }
+}
+
+footer {
+  background-color: #323232;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=bio.css.map */
