@@ -3,6 +3,8 @@
 @use 'partials/typography' as *;
 
 
+
+
 * {
     box-sizing: border-box;
 }
@@ -16,14 +18,15 @@ html, body {
 
 .site-header {
   background: #323232;
-  width: 100%;
-	@include bold-header_mobile;
+  // width: 100%;
+	// @include bold-header_mobile;
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 767px;
+
 
     @include tablet {
       flex-direction: row;
@@ -32,34 +35,59 @@ html, body {
   }
 }
 
-.site-logo, .primary-nav__link, .primary-nav__item {
+.site-logo__title {
+  margin-bottom: 0;
+	font-size: 1.5rem;
+	line-height: 1.25rem;
+
+	@include tablet {
+		padding-bottom: 1rem;
+	}
+}
+
+
+.site-logo, .nav-list__item-link {
   color: white;
   text-decoration: none;
   display: inline-flex;
-	padding-top: 1rem;
 }
 
-.primary-nav {
+.font-light {
+	font-weight: 100;
+}
+
+.nav {
   display: flex;
   width: 100%;
   justify-content: center;
-  &__title {
-    display: flex;
-    // border: 1px black solid;
-    width: 100%;
-    justify-content: center;
-  }
-  &__list {
+  // &-title {
+  //   display: flex;
+  //   width: 100%;
+  // }
+  &-list {
     display: flex;
     list-style: none;
     padding: 0;
     width: 100%;
     justify-content: space-evenly;
+		margin: 0;
 
-    @include tablet {
+		@include tablet {
       display: flex;
       justify-content: flex-start;
     }
+
+		&__item {
+			width: 50%;
+			padding-top: 0;
+			text-align: center;
+			// border-bottom: white 3px solid;
+
+			&-link {
+				text-decoration: none;
+				border-width: 100%;
+			}
+		}
   }  
 }
 
@@ -73,9 +101,18 @@ html, body {
 	align-items: center;  
   height: 15rem;
 
-  &-title {
-		@include bold-header_mobile;
+  &-container {
+		// @include bold-header_mobile;
     color: white;
+		padding: 0 1rem;
+
+		&__title {
+			@include tablet {
+				font-size: 3.75rem;
+				line-height: 4.25rem;
+				font-weight: 700;
+			}
+		}
   }
 }
 
@@ -85,7 +122,13 @@ html, body {
 
   &-title {
     @include bold-header_mobile;
-    padding: 1rem;
+    padding: 0 1rem;
+
+		@include tablet {
+			font-size: 2.25rem;
+			line-height: 2.75rem;
+			font-weight: 600;
+		}
   }
 
   &-content {
@@ -140,7 +183,7 @@ html, body {
 
 .card {
 	width: 100%;
-	padding-bottom: 1rem;
+	padding-bottom: 0.5rem;
 	
 	&-image {
 		width: 100%;

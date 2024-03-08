@@ -29,10 +29,6 @@ html, body {
 
 .site-header {
   background: #323232;
-  width: 100%;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
 }
 .site-header__wrapper {
   display: flex;
@@ -47,35 +43,54 @@ html, body {
   }
 }
 
-.site-logo, .primary-nav__link, .primary-nav__item {
+.site-logo__title {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .site-logo__title {
+    padding-bottom: 1rem;
+  }
+}
+
+.site-logo, .nav-list__item-link {
   color: white;
   text-decoration: none;
   display: inline-flex;
-  padding-top: 1rem;
 }
 
-.primary-nav {
+.font-light {
+  font-weight: 100;
+}
+
+.nav {
   display: flex;
   width: 100%;
   justify-content: center;
 }
-.primary-nav__title {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-.primary-nav__list {
+.nav-list {
   display: flex;
   list-style: none;
   padding: 0;
   width: 100%;
   justify-content: space-evenly;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
-  .primary-nav__list {
+  .nav-list {
     display: flex;
     justify-content: flex-start;
   }
+}
+.nav-list__item {
+  width: 50%;
+  padding-top: 0;
+  text-align: center;
+}
+.nav-list__item-link {
+  text-decoration: none;
+  border-width: 100%;
 }
 
 .banner {
@@ -87,11 +102,16 @@ html, body {
   align-items: center;
   height: 15rem;
 }
-.banner-title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
+.banner-container {
   color: white;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .banner-container__title {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
 }
 
 .bio {
@@ -101,7 +121,14 @@ html, body {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  padding: 1rem;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .bio-title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+  }
 }
 .bio-content {
   padding: 0 1rem;
@@ -142,7 +169,7 @@ html, body {
 
 .card {
   width: 100%;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 .card-image {
   width: 100%;
