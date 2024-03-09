@@ -164,7 +164,7 @@ html, body {
 .card-section__container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .card {
@@ -191,4 +191,18 @@ footer {
   color: white;
   display: flex;
   flex-direction: column;
+  padding: 1rem;
+}
+
+.footer-social__logo {
+  padding-right: 2rem;
+  height: 1.5rem;
+}
+.footer-contact {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.footer-copyright {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
 }/*# sourceMappingURL=bio.css.map */

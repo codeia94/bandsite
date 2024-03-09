@@ -7,6 +7,7 @@
 
 * {
     box-sizing: border-box;
+		// outline: 1px dashed red;
 }
 
 html, body {
@@ -177,7 +178,7 @@ html, body {
 	&__container {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-evenly;
+		justify-content: space-between;
 	}
 }
 
@@ -203,4 +204,24 @@ footer {
 	color: white;
 	display: flex;
 	flex-direction: column;
+	padding: 1rem;
 }
+
+.footer {
+
+	&-social {
+		&__logo {
+			padding-right: 2rem;
+			height: 1.5rem;
+		}
+	}
+	&-contact {
+		font-size: .8125rem;
+		line-height: 1.125rem;
+	}
+	&-copyright {
+		font-size: .8125rem;
+		line-height: 1.125rem;
+	}
+}
+
