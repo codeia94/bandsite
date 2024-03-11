@@ -40,7 +40,12 @@ html, body {
 @media screen and (min-width: 768px) {
   .site-header__wrapper {
     flex-direction: row;
-    margin: 0 36px;
+    margin: 0 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .site-header__wrapper {
+    margin: 0 100px;
   }
 }
 
@@ -97,7 +102,6 @@ html, body {
   text-decoration: none;
   border-width: 100%;
   color: #E1E1E1;
-  font-size: 14px;
 }
 
 .banner {
@@ -120,8 +124,13 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .banner-container {
-    margin: 0 36px;
+    margin: 0 2.25rem;
     padding: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .banner-container {
+    margin: 0 100px;
   }
 }
 .banner-container__title {
@@ -152,8 +161,13 @@ html, body {
     font-size: 36px;
     line-height: 44px;
     font-weight: 600;
-    margin: 0 36px;
-    padding: 48px 0 36px 0;
+    margin: 0 2.25rem;
+    padding: 3rem 0 2.25rem 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bio-title {
+    margin: 0 100px;
   }
 }
 .bio-content {
@@ -163,12 +177,12 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .bio-content {
-    padding: 0 96px;
+    padding: 0 6rem;
   }
 }
 .bio-content__caption {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -179,15 +193,15 @@ html, body {
   height: 100%;
 }
 .bio .article-content__title {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
 }
 .bio .article-content__paragraph {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: 400;
 }
 @media screen and (min-width: 768px) {
@@ -203,13 +217,13 @@ html, body {
 
 @media screen and (min-width: 768px) {
   .caption__font {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
 .card-section {
   background-color: #FAFAFA;
-  padding: 16px;
+  padding: 1rem;
 }
 @media screen and (min-width: 768px) {
   .card-section {
@@ -223,11 +237,16 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .card-section__title {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 600;
-    margin: 0 36px;
+    margin: 0 2.25rem;
     padding: 2.25rem 0 2.25rem 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card-section__title {
+    margin: 0 100px;
   }
 }
 .card-section__container {
@@ -237,14 +256,19 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .card-section__container {
-    margin: 0 36px;
-    padding-bottom: 20px;
+    margin: 0 2.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card-section__container {
+    margin: 0 100px;
   }
 }
 
 .card {
   width: 100%;
-  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
 }
 .card-image {
   width: 100%;
@@ -266,7 +290,7 @@ footer {
   color: white;
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 1rem;
 }
 @media screen and (min-width: 768px) {
   footer {
@@ -278,10 +302,15 @@ footer {
   .footer {
     display: flex;
     flex-direction: column;
-    margin: 0 36px;
+    margin: 0 2.25rem;
     box-sizing: border-box;
     position: relative;
     padding: 2.25rem 0 2.25rem 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    margin: 0 100px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -298,16 +327,16 @@ footer {
 }
 @media screen and (min-width: 768px) {
   .footer-social {
-    padding-left: 32px;
+    padding-left: 2rem;
   }
 }
 .footer-social__logo {
-  padding-right: 32px;
-  height: 24px;
+  padding-right: 2rem;
+  height: 1.5rem;
 }
 .footer-contact {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
 }
 @media screen and (min-width: 768px) {
   .footer-contact {
@@ -317,7 +346,7 @@ footer {
   }
 }
 .footer-contact__details {
-  padding-bottom: 32px;
+  padding-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .footer-contact__details {
@@ -334,6 +363,6 @@ footer {
   }
 }
 .footer-copyright {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
 }/*# sourceMappingURL=bio.css.map */
