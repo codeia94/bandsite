@@ -63,7 +63,7 @@ html, body {
 }
 
 .nav-font {
-	// font-weight: 100;
+	font-weight: 100;
 }
 
 .nav {
@@ -89,38 +89,38 @@ html, body {
 			width: 50%;
 			padding-top: 0;
 			text-align: center;
-			// border-bottom: white .1875rem solid;
+			
 			&:hover {
-				border-bottom: white solid 4px;
+				transition: 0.5s;
+				transition-timing-function: ease;
+				border-bottom: white solid 3px;
 				color: white;
-				font-weight: 700;
+				font-weight: bold;
 			}
 
 
 			@include tablet {
 				width: auto;
-				padding-right: 32px;
+				margin-right: 32px;
 			}
 
 			&-link {
 				text-decoration: none;
-				// border-width: 100%;
-				color: #E1E1E1;
-
-				
+				color: #E1E1E1;	
 			}
 		}
   }  
 }
 
 .banner {
-  background-image: url(../assets/images/hero-bio.jpg);
+  background-image: linear-gradient(0deg, rgba(50, 50, 50, 0.438), rgba(50, 50, 50, 0.500)), url(../assets/images/hero-bio.jpg);
   background-blend-mode: overlay #323232 ;
   background-position: center;
   background-size: cover;
   display: flex;
 	align-items: center;  
   height: 240px;
+	
 	
 	@include tablet {
 		height: 560px;
@@ -287,6 +287,11 @@ html, body {
 .card {
 	width: 100%;
 	padding-bottom: .5rem;
+	filter: grayscale(100%);
+	
+	&:hover {
+		filter: grayscale(0%);
+	}
 	
 	&-image {
 		width: 100%;
@@ -300,6 +305,8 @@ html, body {
 		width: 32%;
 	}
 }
+
+.card 
 
 footer {
 	background-color: #323232;
