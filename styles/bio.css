@@ -307,7 +307,7 @@ html, body {
   }
 }
 
-.card footer {
+footer {
   background-color: #323232;
   color: white;
   display: flex;
@@ -315,11 +315,14 @@ html, body {
   padding: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .card footer {
+  footer {
     padding: 0;
   }
 }
 
+.footer {
+  background-color: #323232;
+}
 @media screen and (min-width: 768px) {
   .footer {
     display: flex;

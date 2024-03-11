@@ -306,8 +306,6 @@ html, body {
 	}
 }
 
-.card 
-
 footer {
 	background-color: #323232;
 	color: white;
@@ -321,6 +319,7 @@ footer {
 }
 
 .footer {
+	background-color: #323232;
 	@include tablet {
 		display: flex;
 		flex-direction: column;
