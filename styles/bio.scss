@@ -2,14 +2,15 @@
 @use 'partials/mixins' as *;
 @use 'partials/typography' as *;
 
-$tablet-margin :0 2.25rem;
+$tablet-margin :0 36px;
+$padding-abhealine : 48px 0 36px 0;
 
 
 
 
 * {
     box-sizing: border-box;
-		// outline: 1px dashed red;
+		// outline: .0625rem dashed red;
 }
 
 html, body {
@@ -19,9 +20,11 @@ html, body {
 	font-family: 'Avenir';
 }
 
+
+
 .site-header {
   background: #323232;
-	padding-top: 1rem;
+	padding-top: 16px;
   // width: 100%;
 	// @include bold-header_mobile;
 	@include tablet {
@@ -33,7 +36,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 767px;
+    max-width: 47.9375rem;
 
     @include tablet {
       flex-direction: row;
@@ -44,11 +47,11 @@ html, body {
 
 .site-logo {
 	@include tablet {
-		padding-right: 3rem;
+		padding-right: 48px;
 	}
 	&__bandsite {
-		max-width: 120px;
-		max-height: 20px;
+		max-width: 7.5rem;
+		max-height: 1.25rem;
 	}
 }
 
@@ -78,7 +81,7 @@ html, body {
     width: 100%;
     justify-content: space-evenly;
 		margin: 0;
-		// height: 50px;
+		// height: 3.125rem;
 
 		@include tablet {
       display: flex;
@@ -91,18 +94,18 @@ html, body {
 			width: 50%;
 			padding-top: 0;
 			text-align: center;
-			// border-bottom: white 3px solid;
+			// border-bottom: white .1875rem solid;
 
 			@include tablet {
 				width: auto;
-				padding-right: 2rem;
+				padding-right: 32px;
 			}
 
 			&-link {
 				text-decoration: none;
 				border-width: 100%;
 				color: #E1E1E1;
-				font-size: .875rem;
+				font-size: 14px;
 			}
 		}
   }  
@@ -116,16 +119,16 @@ html, body {
   background-size: cover;
   display: flex;
 	align-items: center;  
-  height: 15rem;
+  height: 240px;
 	
 	@include tablet {
-		height: 35rem;
+		height: 560px;
 	}
 
   &-container {
 		// @include bold-header_mobile;
     color: white;
-		padding: 0 1rem;
+		padding: 0 16px;
 
 		@include tablet {
 			// padding: $tablet-padding;
@@ -134,13 +137,13 @@ html, body {
 		}
 
 		&__title {
-			font-size: 1.5rem;
-			line-height: 2rem;
+			font-size: 24px;
+			line-height: 32px;
 			font-weight: 700;
 
 			@include tablet {
-				font-size: 3.75rem;
-				line-height: 4.25rem;
+				font-size: 60px;
+				line-height: 68px;
 				font-weight: 700;
 			}
 		}
@@ -156,30 +159,30 @@ html, body {
 
   &-title {
     @include bold-header_mobile;
-    	padding: 0 1rem;
-			margin: 24px 0 16px 0;
+    	padding: 0 16px;
+			margin: 1.5rem 0 1rem 0;
 
 		@include tablet {
-			font-size: 2.25rem;
-			line-height: 2.75rem;
+			font-size: 36px;
+			line-height: 44px;
 			font-weight: 600;
 			margin: $tablet-margin;
-			padding: 0;
+			padding: $padding-abhealine;
 		}
   }
 
   &-content {
-    padding: 0 1rem;
+    padding: 0 16px;
     display: flex;
     flex-direction: column;
 
 		@include tablet {
-			padding: 1rem 6rem;
+			padding: 0 96px;
 		}
 
 		&__caption {
-			font-size: .875rem;
-			line-height: 1.375rem;
+			font-size: 14px;
+			line-height: 22px;
 			font-weight: 600;
 
 			@include tablet-subheader_text
@@ -203,34 +206,40 @@ html, body {
 		&-content {
 	
 			&__title {
-				font-size: .875rem;
-				line-height: 1.375rem;
+				font-size: 14px;
+				line-height: 22px;
 
 				@include tablet-subheader_text
 			}
 
 			&__paragraph {
-				font-size: .8125rem;
-				line-height: 1.125rem;
+				font-size: 13px;
+				line-height: 18px;
 				font-weight: 400;
 				
 				
 				@include tablet {
 					display: flex;
 					justify-content: space-between;
-					font-size: 14px;
-					line-height: 22px;
+					font-size: .875rem;
+					line-height: 1.375rem;
 					font-weight: 400;
-					gap: 24px;
+					gap: 1.5rem;
 				}
 			}
 		}
 	}
 }
 
+.caption__font {
+	@include tablet {
+		font-size: 18px;
+	}
+}
+
 .card-section {
 	background-color: #FAFAFA;
-	padding: 1rem;
+	padding: 16px;
 
 	@include tablet {
 		padding: 0;
@@ -240,11 +249,11 @@ html, body {
 	&__title {
 		@include bold-header_mobile;
 		@include tablet {
-			font-size: 2.25rem;
-			line-height: 2.75rem;
+			font-size: 36px;
+			line-height: 44px;
 			font-weight: 600;
 			margin: $tablet-margin;
-			padding: 0;
+			padding: 2.25rem 0 2.25rem 0;
 		}
 	}
 
@@ -255,13 +264,14 @@ html, body {
 
 		@include tablet {
 			margin: $tablet-margin;
+			padding-bottom: 20px;
 		}
 	}
 }
 
 .card {
 	width: 100%;
-	padding-bottom: 0.5rem;
+	padding-bottom: 8px;
 	
 	&-image {
 		width: 100%;
@@ -281,7 +291,7 @@ footer {
 	color: white;
 	display: flex;
 	flex-direction: column;
-	padding: 1rem;
+	padding: 16px;
 
 	@include tablet {
 		padding: 0;
@@ -292,9 +302,10 @@ footer {
 	@include tablet {
 		display: flex;
 		flex-direction: column;
-		margin: 0 36px;
+		margin: $tablet-margin;
 		box-sizing: border-box;
 		position: relative;
+		padding: 2.25rem 0 2.25rem 0;
 	}
 
 	&-top {
@@ -305,22 +316,32 @@ footer {
 		}
 	}
 
+	&-title {
+		@include tablet-subheader_text;
+	}
+
 	&-social {
 		@include tablet {
-			padding-left: 2rem;
+			padding-left: 32px;
 		}
 
 		&__logo {
-			padding-right: 2rem;
-			height: 1.5rem;
+			padding-right: 32px;
+			height: 24px;
 		}
 	}
 	&-contact {
-		font-size: .8125rem;
-		line-height: 1.125rem;
+		font-size: 13px;
+		line-height: 18px;
+
+		@include tablet {
+			font-size: .875rem;
+			line-height: 1.25rem;
+			font-weight: 400;
+		}
 
 		&__details {
-			padding-bottom: 2rem;
+			padding-bottom: 32px;
 
 			@include tablet {
 				display: flex;
@@ -332,12 +353,13 @@ footer {
 		@include tablet {
 			box-sizing: border-box;
 			position: absolute;
-			top: .75rem;
+			top: 4.3rem;
 			right: 0;
 		}
 	}
 	&-copyright {
-		font-size: .8125rem;
-		line-height: 1.125rem;
+		font-size: 13px;
+		line-height: 18px;
+
 	}
 }

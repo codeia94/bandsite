@@ -29,29 +29,29 @@ html, body {
 
 .site-header {
   background: #323232;
-  padding-top: 1rem;
+  padding-top: 16px;
 }
 .site-header__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 767px;
+  max-width: 47.9375rem;
 }
 @media screen and (min-width: 768px) {
   .site-header__wrapper {
     flex-direction: row;
-    margin: 0 2.25rem;
+    margin: 0 36px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .site-logo {
-    padding-right: 3rem;
+    padding-right: 48px;
   }
 }
 .site-logo__bandsite {
-  max-width: 120px;
-  max-height: 20px;
+  max-width: 7.5rem;
+  max-height: 1.25rem;
 }
 
 .nav-list__item-link {
@@ -90,14 +90,14 @@ html, body {
 @media screen and (min-width: 768px) {
   .nav-list__item {
     width: auto;
-    padding-right: 2rem;
+    padding-right: 32px;
   }
 }
 .nav-list__item-link {
   text-decoration: none;
   border-width: 100%;
   color: #E1E1E1;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .banner {
@@ -107,32 +107,32 @@ html, body {
   background-size: cover;
   display: flex;
   align-items: center;
-  height: 15rem;
+  height: 240px;
 }
 @media screen and (min-width: 768px) {
   .banner {
-    height: 35rem;
+    height: 560px;
   }
 }
 .banner-container {
   color: white;
-  padding: 0 1rem;
+  padding: 0 16px;
 }
 @media screen and (min-width: 768px) {
   .banner-container {
-    margin: 0 2.25rem;
+    margin: 0 36px;
     padding: 0;
   }
 }
 .banner-container__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 24px;
+  line-height: 32px;
   font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .banner-container__title {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
+    font-size: 60px;
+    line-height: 68px;
     font-weight: 700;
   }
 }
@@ -144,31 +144,31 @@ html, body {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  padding: 0 1rem;
-  margin: 24px 0 16px 0;
+  padding: 0 16px;
+  margin: 1.5rem 0 1rem 0;
 }
 @media screen and (min-width: 768px) {
   .bio-title {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
+    font-size: 36px;
+    line-height: 44px;
     font-weight: 600;
-    margin: 0 2.25rem;
-    padding: 0;
+    margin: 0 36px;
+    padding: 48px 0 36px 0;
   }
 }
 .bio-content {
-  padding: 0 1rem;
+  padding: 0 16px;
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .bio-content {
-    padding: 1rem 6rem;
+    padding: 0 96px;
   }
 }
 .bio-content__caption {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  font-size: 14px;
+  line-height: 22px;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -179,31 +179,37 @@ html, body {
   height: 100%;
 }
 .bio .article-content__title {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  font-size: 14px;
+  line-height: 22px;
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
 }
 .bio .article-content__paragraph {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  font-size: 13px;
+  line-height: 18px;
   font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .bio .article-content__paragraph {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 400;
-    gap: 24px;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .caption__font {
+    font-size: 18px;
   }
 }
 
 .card-section {
   background-color: #FAFAFA;
-  padding: 1rem;
+  padding: 16px;
 }
 @media screen and (min-width: 768px) {
   .card-section {
@@ -217,11 +223,11 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .card-section__title {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
+    font-size: 36px;
+    line-height: 44px;
     font-weight: 600;
-    margin: 0 2.25rem;
-    padding: 0;
+    margin: 0 36px;
+    padding: 2.25rem 0 2.25rem 0;
   }
 }
 .card-section__container {
@@ -231,13 +237,14 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .card-section__container {
-    margin: 0 2.25rem;
+    margin: 0 36px;
+    padding-bottom: 20px;
   }
 }
 
 .card {
   width: 100%;
-  padding-bottom: 0.5rem;
+  padding-bottom: 8px;
 }
 .card-image {
   width: 100%;
@@ -259,7 +266,7 @@ footer {
   color: white;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 16px;
 }
 @media screen and (min-width: 768px) {
   footer {
@@ -274,6 +281,7 @@ footer {
     margin: 0 36px;
     box-sizing: border-box;
     position: relative;
+    padding: 2.25rem 0 2.25rem 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -283,21 +291,33 @@ footer {
     align-items: center;
   }
 }
+.footer-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
 @media screen and (min-width: 768px) {
   .footer-social {
-    padding-left: 2rem;
+    padding-left: 32px;
   }
 }
 .footer-social__logo {
-  padding-right: 2rem;
-  height: 1.5rem;
+  padding-right: 32px;
+  height: 24px;
 }
 .footer-contact {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  font-size: 13px;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .footer-contact {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
 }
 .footer-contact__details {
-  padding-bottom: 2rem;
+  padding-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
   .footer-contact__details {
@@ -309,11 +329,11 @@ footer {
   .footer-logo {
     box-sizing: border-box;
     position: absolute;
-    top: 0.75rem;
+    top: 4.3rem;
     right: 0;
   }
 }
 .footer-copyright {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  font-size: 13px;
+  line-height: 18px;
 }/*# sourceMappingURL=bio.css.map */
