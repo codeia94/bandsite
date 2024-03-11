@@ -261,10 +261,25 @@ footer {
   flex-direction: column;
   padding: 1rem;
 }
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 0;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .footer {
     display: flex;
+    flex-direction: column;
+    margin: 0 36px;
+    box-sizing: border-box;
+    position: relative;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-top {
+    display: flex;
+    flex-direction: row;
     align-items: center;
   }
 }
@@ -281,8 +296,22 @@ footer {
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
-.footer-logo {
-  padding-top: 2rem;
+.footer-contact__details {
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer-contact__details {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-logo {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0.75rem;
+    right: 0;
+  }
 }
 .footer-copyright {
   font-size: 0.8125rem;

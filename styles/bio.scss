@@ -282,16 +282,30 @@ footer {
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
+
+	@include tablet {
+		padding: 0;
+	}
 }
 
 .footer {
-
-	 @include tablet {
+	@include tablet {
 		display: flex;
-		align-items: center;
-	 }
-	&-social {
+		flex-direction: column;
+		margin: 0 36px;
+		box-sizing: border-box;
+		position: relative;
+	}
 
+	&-top {
+		@include tablet {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+
+	&-social {
 		@include tablet {
 			padding-left: 2rem;
 		}
@@ -304,9 +318,23 @@ footer {
 	&-contact {
 		font-size: .8125rem;
 		line-height: 1.125rem;
+
+		&__details {
+			padding-bottom: 2rem;
+
+			@include tablet {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
 	}
 	&-logo {
-		padding-top: 2rem;
+		@include tablet {
+			box-sizing: border-box;
+			position: absolute;
+			top: .75rem;
+			right: 0;
+		}
 	}
 	&-copyright {
 		font-size: .8125rem;
