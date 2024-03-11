@@ -45,13 +45,18 @@ html, body {
 }
 @media screen and (min-width: 1280px) {
   .site-header__wrapper {
-    margin: 0 100px;
+    margin: 0 7rem;
   }
 }
 
+.site-logo {
+  max-width: 7.5rem;
+  max-height: 1.25rem;
+}
 @media screen and (min-width: 768px) {
   .site-logo {
-    padding-right: 48px;
+    max-width: 7.5rem;
+    max-height: 1.25rem;
   }
 }
 .site-logo__bandsite {
@@ -85,6 +90,7 @@ html, body {
   .nav-list {
     display: flex;
     justify-content: flex-start;
+    padding-left: 3rem;
   }
 }
 .nav-list__item {
@@ -130,7 +136,7 @@ html, body {
 }
 @media screen and (min-width: 1280px) {
   .banner-container {
-    margin: 0 100px;
+    margin: 0 7rem;
   }
 }
 .banner-container__title {
@@ -167,7 +173,7 @@ html, body {
 }
 @media screen and (min-width: 1280px) {
   .bio-title {
-    margin: 0 100px;
+    margin: 0 7rem;
   }
 }
 .bio-content {
@@ -177,7 +183,12 @@ html, body {
 }
 @media screen and (min-width: 768px) {
   .bio-content {
-    padding: 0 6rem;
+    padding: 0 6rem 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bio-content {
+    padding: 0 12rem 1rem;
   }
 }
 .bio-content__caption {
@@ -246,7 +257,7 @@ html, body {
 }
 @media screen and (min-width: 1280px) {
   .card-section__title {
-    margin: 0 100px;
+    margin: 0 7rem;
   }
 }
 .card-section__container {
@@ -262,7 +273,7 @@ html, body {
 }
 @media screen and (min-width: 1280px) {
   .card-section__container {
-    margin: 0 100px;
+    margin: 0 7rem;
   }
 }
 
@@ -310,7 +321,7 @@ footer {
 }
 @media screen and (min-width: 1280px) {
   .footer {
-    margin: 0 100px;
+    margin: 0 7rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -343,6 +354,13 @@ footer {
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
   }
 }
 .footer-contact__details {

@@ -5,7 +5,7 @@
 $tablet-margin: 0 2.25rem;
 $padding-abhealine: 3rem 0 2.25rem 0;
 
-$desktop-margin: 0 3.9375rem;
+$desktop-margin: 0 7rem;
 
 * {
     box-sizing: border-box;
@@ -43,14 +43,17 @@ html, body {
     }
 
 		@include desktop {
-			margin: 0 100px;
+			margin: $desktop-margin;
 		}
   }
 }
 
 .site-logo {
+	max-width: 7.5rem;
+	max-height: 1.25rem;
 	@include tablet {
-		padding-right: 48px;
+		max-width: 7.5rem;
+		max-height: 1.25rem;
 	}
 	&__bandsite {
 		max-width: 7.5rem;
@@ -88,6 +91,7 @@ html, body {
 		@include tablet {
       display: flex;
 			justify-content: flex-start;
+			padding-left: 3rem;
     }
 
 		&__item {
@@ -135,7 +139,7 @@ html, body {
 		}
 
 		@include desktop {
-			margin: 0 100px;
+			margin: $desktop-margin;
 		}
 
 		&__title {
@@ -155,9 +159,6 @@ html, body {
 
 .bio {
   box-sizing: border-box;
-	// @include tablet {
-	// 	margin: $tablet-margin;
-	// }
 
   &-title {
     @include bold-header_mobile;
@@ -173,7 +174,7 @@ html, body {
 		}
 
 		@include desktop {
-			margin: 0 100px;
+			margin: $desktop-margin;
 		}
   }
 
@@ -183,7 +184,10 @@ html, body {
     flex-direction: column;
 
 		@include tablet {
-			padding: 0 6rem;
+			padding: 0 6rem 1rem;
+		}
+		@include desktop {
+			padding: 0 12rem 1rem;
 		}
 
 		&__caption {
@@ -262,7 +266,7 @@ html, body {
 			padding: 2.25rem 0 2.25rem 0;
 		}
 		@include desktop {
-			margin: 0 100px;
+			margin: $desktop-margin;
 		}
 	}
 
@@ -276,7 +280,7 @@ html, body {
 			padding-bottom: 1.25rem;
 		}
 		@include desktop {
-			margin: 0 100px;
+			margin: $desktop-margin;
 		}
 	}
 }
@@ -320,7 +324,7 @@ footer {
 		padding: 2.25rem 0 2.25rem 0;
 	}
 	@include desktop {
-		margin: 0 100px;
+		margin: $desktop-margin;
 	}
 
 	&-top {
@@ -353,6 +357,11 @@ footer {
 			font-size: .875rem;
 			line-height: 1.25rem;
 			font-weight: 400;
+		}
+		@include desktop {
+			display: flex;
+			flex-direction: column;
+			width: 65%;
 		}
 
 		&__details {
