@@ -197,7 +197,7 @@ html, body {
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
-    gap: 1.5rem;
+    gap: 24px;
   }
 }
 
@@ -266,6 +266,11 @@ footer {
   .footer {
     display: flex;
     align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-social {
+    padding-left: 2rem;
   }
 }
 .footer-social__logo {
