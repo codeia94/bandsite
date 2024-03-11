@@ -213,6 +213,16 @@ html, body {
 				font-size: .8125rem;
 				line-height: 1.125rem;
 				font-weight: 400;
+				
+				
+				@include tablet {
+					display: flex;
+					justify-content: space-between;
+					font-size: 14px;
+					line-height: 22px;
+					font-weight: 400;
+					gap: 1.5rem;
+				}
 			}
 		}
 	}
@@ -275,6 +285,11 @@ footer {
 }
 
 .footer {
+	@include tablet {
+		display: flex;
+		align-items: center;
+	}
+
 	&-social {
 		&__logo {
 			padding-right: 2rem;
