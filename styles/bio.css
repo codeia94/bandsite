@@ -70,9 +70,6 @@ html, body {
   display: inline-flex;
 }
 
-.nav-font {
-  font-weight: 100;
-}
 .nav {
   display: flex;
   width: 100%;
@@ -98,6 +95,11 @@ html, body {
   padding-top: 0;
   text-align: center;
 }
+.nav-list__item:hover {
+  border-bottom: white solid 4px;
+  color: white;
+  font-weight: 700;
+}
 @media screen and (min-width: 768px) {
   .nav-list__item {
     width: auto;
@@ -106,7 +108,6 @@ html, body {
 }
 .nav-list__item-link {
   text-decoration: none;
-  border-width: 100%;
   color: #E1E1E1;
 }
 

@@ -24,13 +24,7 @@ html, body {
 .site-header {
   background: #323232;
 	padding-top: 16px;
-  // width: 100%;
-	// @include bold-header_mobile;
-	@include tablet {
-		// padding: $tablet-padding;
-	}
 	
-
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -69,10 +63,7 @@ html, body {
 }
 
 .nav-font {
-	font-weight: 100;
-	@include tablet {
-		
-	}
+	// font-weight: 100;
 }
 
 .nav {
@@ -99,6 +90,12 @@ html, body {
 			padding-top: 0;
 			text-align: center;
 			// border-bottom: white .1875rem solid;
+			&:hover {
+				border-bottom: white solid 4px;
+				color: white;
+				font-weight: 700;
+			}
+
 
 			@include tablet {
 				width: auto;
@@ -107,8 +104,10 @@ html, body {
 
 			&-link {
 				text-decoration: none;
-				border-width: 100%;
+				// border-width: 100%;
 				color: #E1E1E1;
+
+				
 			}
 		}
   }  
