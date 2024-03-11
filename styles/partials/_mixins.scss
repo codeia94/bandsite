@@ -25,3 +25,10 @@
 	line-height: 1.125rem;
 	font-weight: 400;
 }
+
+
+@mixin tablet-subheader_text {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 600;
+}
