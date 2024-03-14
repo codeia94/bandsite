@@ -19,8 +19,6 @@ html, body {
 	font-family: 'Avenir';
 }
 
-
-
 .site-header {
   background: #323232;
 	padding-top: 16px;
@@ -306,10 +304,32 @@ html, body {
 	}
 }
 
-.site-comment {
+
+// COMMENT SECTION
+
+.comment {
 	padding: 0 1rem;
-	&__title {
-		margin: 1rem 0;
+	&-section {
+		display: flex;
+	}
+	&-image {
+		max-width: 2.25rem;
+		max-height: 2.25rem;
+		border-radius: 50%;
+		margin-top: 1rem;
+	}
+	&-new {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		font-size: 13px;
+		padding-left: 1rem;
+		justify-content: space-between;
+
+		&__comment {
+			margin: 0;
+		}
 	}
 }
 
@@ -358,10 +378,16 @@ button {
 
 hr {
 	border-top: 1px solid #AFAFAF;
-	margin: 1rem 0;;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	width: 100%;
 }
 
 
+
+
+
+//End of Footer
 
 footer {
 	background-color: #323232;
