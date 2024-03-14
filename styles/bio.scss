@@ -306,12 +306,69 @@ html, body {
 	}
 }
 
+.site-comment {
+	padding: 0 1rem;
+	&__title {
+		margin: 1rem 0;
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: row;
+	font-size: 13px;
+
+	&-image {
+		max-width: 2.25rem;
+		max-height: 2.25rem;
+		border-radius: 50%;
+		margin-top: 1.375rem;
+	}
+	&-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding-left: 16px;
+
+		&__item {
+			color: #AFAFAF;
+			line-height: 1.125rem;
+			font-weight: 600;
+		}
+		&__text {
+			margin:.25rem 0 1rem;
+		}
+	}
+}
+
+input[type="text"] {
+	min-height: 36px;
+	border-radius: 4px;
+	border-color: rgba(225, 225, 225);
+	border-width: .0625rem;
+	padding: .75rem;
+}
+
+button {
+	height: 2.5rem;
+	background-color: #323232;
+	color: white;
+	border-radius: 4px;
+}
+
+hr {
+	border-top: 1px solid #AFAFAF;
+	margin: 1rem 0;;
+}
+
+
+
 footer {
 	background-color: #323232;
 	color: white;
 	display: flex;
 	flex-direction: column;
-	padding: 1rem;
+	padding: .75rem;
 
 	@include tablet {
 		padding: 0;
