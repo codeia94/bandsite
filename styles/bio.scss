@@ -9,7 +9,6 @@ $desktop-margin: 0 7rem;
 
 * {
     box-sizing: border-box;
-		// outline: .0625rem dashed red;
 }
 
 html, body {
@@ -18,8 +17,6 @@ html, body {
 	width: 100%;
 	font-family: 'Avenir';
 }
-
-
 
 .site-header {
   background: #323232;
@@ -54,7 +51,6 @@ html, body {
 		max-height: 1.25rem;
 	}
 }
-
 
 .nav-list__item-link {
   color: white;
@@ -97,7 +93,6 @@ html, body {
 				color: white;
 				font-weight: bold;
 			}
-
 
 			@include tablet {
 				width: auto;
@@ -305,6 +300,39 @@ html, body {
 		width: 32%;
 	}
 }
+
+// Form
+
+.site-form {
+	padding: 0 1rem;
+}
+
+.form {
+	display: flex;
+
+	&-image {
+		max-width: 2.25rem;
+		max-height: 2.25rem;
+		border-radius: 50%;
+	}
+
+	&-comment {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
 	background-color: #323232;
