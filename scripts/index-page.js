@@ -22,41 +22,51 @@ console.log(comments);
 const commentWrapper = document.querySelector(".comment-wrapper");
 console.log(commentWrapper);
 
-// Container for existing comments
-//1. create an element
-const commentContainer = document.createElement("div");
-
-//2a. add any classes/attributes
-commentContainer.classList.add("comment-section");
 
 
-//2b. add any content
-const commentImage = document.createElement("img");
-commentImage.classList.add("comment-image");
-commentImage.setAttribute("src", "assets/images/Photo-gallery-1.jpg");
-commentContainer.appendChild(commentImage);
 
-const comment = document.createElement("div");
-comment.classList.add("comment-new");
-commentContainer.appendChild(comment);
+for (let i = 0; i < comments.length; i++) {
+	
+	// For each comment
+	//1. create an element
+	const commentContainer = document.createElement("div");
 
-const nameComment = document.createElement("h3");
-nameComment.classList.add("comment-new-name");
-nameComment.textContent = "Victor Pinto";
-comment.appendChild(nameComment);
+	//2a. add any classes/attributes
+	commentContainer.classList.add("comment-section");
 
-const dateComment = document.createElement("aside");
-dateComment.classList.add("comment-new__date");
-dateComment.textContent = "11/02/2023";
-comment.appendChild(dateComment);
+	//2b. add any content
+	const commentImage = document.createElement("img");
+	commentImage.classList.add("comment-image");
+	commentImage.setAttribute("src", "assets/images/Photo-gallery-1.jpg");
+	commentContainer.appendChild(commentImage);
 
-const newComment = document.createElement("p");
-newComment.classList.add("comment-new__comment");
-newComment.textContent = "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.";
-comment.appendChild(newComment);
+	const comment = document.createElement("div");
+	comment.classList.add("comment-new");
+	commentContainer.appendChild(comment);
 
-//3. append to parent 
-commentWrapper.appendChild(commentContainer);
+	const nameComment = document.createElement("h3");
+	nameComment.classList.add("comment-new-name");
+	nameComment.textContent = comments[i].name;
+	comment.appendChild(nameComment);
+
+	const dateComment = document.createElement("aside");
+	dateComment.classList.add("comment-new__date");
+	dateComment.textContent = comments[i].date;
+	comment.appendChild(dateComment);
+
+	const newComment = document.createElement("p");
+	newComment.classList.add("comment-new__comment");
+	newComment.textContent = comments[i].comment;
+	comment.appendChild(newComment);
+
+	const line = document.createElement("hr");
+
+	//3. append to parent 
+	commentWrapper.appendChild(commentContainer);
+	commentWrapper.appendChild(line);
+}
+
+
 
 
 /*
