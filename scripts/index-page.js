@@ -1,3 +1,5 @@
+
+//Array of objects
 const comments = [
 	{
 		name: "Victor Pinto",
@@ -18,46 +20,37 @@ const comments = [
 
 console.log(comments);
 
-// Container for comment section
-const commentWrapper = document.querySelector(".comment-wrapper");
-console.log(commentWrapper);
 
-
-
-
-for (let i = 0; i < comments.length; i++) {
+//function to showcomments 
+function showComments(comment) {
 	
-	// For each comment
-	//1. create an element
 	const commentContainer = document.createElement("div");
-
 	//2a. add any classes/attributes
 	commentContainer.classList.add("comment-section");
-
 	//2b. add any content
 	const commentImage = document.createElement("img");
 	commentImage.classList.add("comment-image");
 	commentImage.setAttribute("src", "assets/images/Photo-gallery-1.jpg");
 	commentContainer.appendChild(commentImage);
 
-	const comment = document.createElement("div");
-	comment.classList.add("comment-new");
-	commentContainer.appendChild(comment);
+	const pastComment = document.createElement("div");
+	pastComment.classList.add("comment-new");
+	commentContainer.appendChild(pastComment);
 
 	const nameComment = document.createElement("h3");
 	nameComment.classList.add("comment-new-name");
-	nameComment.textContent = comments[i].name;
-	comment.appendChild(nameComment);
+	nameComment.textContent = comment.name;
+	pastComment.appendChild(nameComment);
 
 	const dateComment = document.createElement("aside");
 	dateComment.classList.add("comment-new__date");
-	dateComment.textContent = comments[i].date;
-	comment.appendChild(dateComment);
+	dateComment.textContent = comment.date;
+	pastComment.appendChild(dateComment);
 
 	const newComment = document.createElement("p");
 	newComment.classList.add("comment-new__comment");
-	newComment.textContent = comments[i].comment;
-	comment.appendChild(newComment);
+	newComment.textContent = comment.comment;
+	pastComment.appendChild(newComment);
 
 	const line = document.createElement("hr");
 
@@ -66,8 +59,65 @@ for (let i = 0; i < comments.length; i++) {
 	commentWrapper.appendChild(line);
 }
 
+//Parent element
+const commentWrapper = document.querySelector(".comment-wrapper");
+console.log(commentWrapper);
 
 
+function renderComments(params) {
+
+	commentWrapper.innerHTML = "";
+	comments.forEach((comment) => {
+		showComments(comment);
+	})
+}
+
+renderComments();
+
+comments.push({
+	name: "",
+	date: "",
+	comment: "",
+})
+
+
+// Submit form by pressing the button
+
+const form = document.querySelector("form");
+console.log(form);
+
+form.addEventListener("submit",(event) => {
+	// stops page from reloading
+	event.preventDefault()
+	const postName = document.querySelector("form-name");
+	const postComment = document.querySelector("form-text");
+
+	if (condition) {
+		
+	} else {
+		
+	}
+
+})
+
+
+
+
+/* <form class="form">
+	<img src="assets/images/Mohan-muruge.jpg" class="form-image">
+	<div class="form-container">
+		<label class="form-container__item">NAME</label>
+		<input class="form-container__text" type="text" name="name" placeholder="Enter your name"/>
+
+		<label class="form-container__item">COMMENT</label>
+		<textarea class="form-container__text" type="text" name="comment" placeholder="Add a new comment"></textarea>
+
+		<button type="submit" class="form-container__button">COMMENT</button>
+	</div>
+</form> */
+// for (let i = 0; i < comments.length; i++) {
+// 	showComments(comments[i]);
+// }
 
 /*
 <div class="comment-section">
