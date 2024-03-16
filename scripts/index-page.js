@@ -1,4 +1,13 @@
 
+const button = document.querySelector(".form-container__button");
+// const commenterName = document.getElementById("#name");
+// const commenterComment = document.getElementById("#comment");
+
+const form = document.getElementById("form");
+const commentWrapper = document.querySelector(".comment-wrapper");
+
+
+
 //Array of objects
 const comments = [
 	{
@@ -21,12 +30,48 @@ const comments = [
 console.log(comments);
 
 
+// form.addEventListener("submit",(e) => {
+// 	e.preventDefault();
+
+// 	const commenterName = document.querySelector(".form-name").value;
+// 	const commenterComment = document.querySelector(".form-text").value;
+
+// 	console.log(commenterName);
+// 	console.log(commenterComment);
+
+// })
+
+/*
+button.addEventListener('click', (e) => {
+	// console.log('test')
+	e.preventDefault()
+	
+	const commenterName = document.querySelector(".form-container__text").value;
+	const commenterComment = document.querySelector("form-container__text").value;
+	const name = document.querySelector(".form-container__text");
+	const comment = document.querySelector("form-container__text");
+
+
+})
+*/
+
+
+function renderComments() {
+
+	commentWrapper.innerHTML = "";
+	comments.forEach((comment) => {
+		showComments(comment);
+	})
+}
+
 //function to showcomments 
 function showComments(comment) {
 	
 	const commentContainer = document.createElement("div");
 	//2a. add any classes/attributes
 	commentContainer.classList.add("comment-section");
+
+	
 	//2b. add any content
 	const commentImage = document.createElement("img");
 	commentImage.classList.add("comment-image");
@@ -59,76 +104,49 @@ function showComments(comment) {
 	commentWrapper.appendChild(line);
 }
 
-//Parent element
-const commentWrapper = document.querySelector(".comment-wrapper");
-console.log(commentWrapper);
 
+form.addEventListener("submit",(e) => {
+	e.preventDefault();
 
-function renderComments(params) {
+	const commenterName = document.querySelector(".form-name").value;
+	const commenterComment = document.querySelector(".form-text").value;
 
-	commentWrapper.innerHTML = "";
-	comments.forEach((comment) => {
-		showComments(comment);
-	})
-}
+	console.log(commenterName);
+	console.log(commenterComment);
+
+	const newComment = {
+		name: commenterName,
+		comment: commenterComment,
+	};
+
+	comments.push(newComment);
+
+	renderComments();
+
+});
 
 renderComments();
 
-comments.push({
-	name: "",
-	date: "",
-	comment: "",
-})
 
+//Parent element
+// const commentWrapper = document.querySelector(".comment-wrapper");
 
-// Submit form by pressing the button
-
-const form = document.querySelector("form");
-console.log(form);
-
-form.addEventListener("submit",(event) => {
-	// stops page from reloading
-	event.preventDefault()
-	const postName = document.querySelector("form-name");
-	const postComment = document.querySelector("form-text");
-
-	if (condition) {
-		
-	} else {
-		
-	}
-
-})
+// console.log(commentWrapper);
 
 
 
+// function renderComments() {
 
-/* <form class="form">
-	<img src="assets/images/Mohan-muruge.jpg" class="form-image">
-	<div class="form-container">
-		<label class="form-container__item">NAME</label>
-		<input class="form-container__text" type="text" name="name" placeholder="Enter your name"/>
-
-		<label class="form-container__item">COMMENT</label>
-		<textarea class="form-container__text" type="text" name="comment" placeholder="Add a new comment"></textarea>
-
-		<button type="submit" class="form-container__button">COMMENT</button>
-	</div>
-</form> */
-// for (let i = 0; i < comments.length; i++) {
-// 	showComments(comments[i]);
+// 	commentWrapper.innerHTML = "";
+// 	comments.forEach((comment) => {
+// 		showComments(comment);
+// 	})
 // }
 
-/*
-<div class="comment-section">
-	<img class="comment-image" src="assets/images/Photo-gallery-1.jpg">
-	<div class="comment-new">
-		<h3 class="comment-new__name">Victor Pinto</h3>
-		<aside class="comment-new__date">11/02/2023</aside>
-		<p class="comment-new__comment">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
-	</div>		
-</div>
-<hr>
-*/
 
-/* 3 STEPS*/
+
+renderComments();
+
+
+// console.log(commentWrapper);
+
