@@ -2,7 +2,6 @@
 const button = document.querySelector(".form-container__button");
 // const commenterName = document.getElementById("#name");
 // const commenterComment = document.getElementById("#comment");
-
 const form = document.getElementById("form");
 const commentWrapper = document.querySelector(".comment-wrapper");
 
@@ -28,32 +27,6 @@ const comments = [
 ];
 
 console.log(comments);
-
-
-// form.addEventListener("submit",(e) => {
-// 	e.preventDefault();
-
-// 	const commenterName = document.querySelector(".form-name").value;
-// 	const commenterComment = document.querySelector(".form-text").value;
-
-// 	console.log(commenterName);
-// 	console.log(commenterComment);
-
-// })
-
-/*
-button.addEventListener('click', (e) => {
-	// console.log('test')
-	e.preventDefault()
-	
-	const commenterName = document.querySelector(".form-container__text").value;
-	const commenterComment = document.querySelector("form-container__text").value;
-	const name = document.querySelector(".form-container__text");
-	const comment = document.querySelector("form-container__text");
-
-
-})
-*/
 
 
 function renderComments() {
@@ -123,6 +96,9 @@ form.addEventListener("submit",(e) => {
 
 	renderComments();
 
+	document.querySelector(".form-name").value = "";
+	document.querySelector(".form-text").value = "";
+
 });
 
 renderComments();
@@ -142,10 +118,6 @@ renderComments();
 // 		showComments(comment);
 // 	})
 // }
-
-
-
-renderComments();
 
 
 // console.log(commentWrapper);
