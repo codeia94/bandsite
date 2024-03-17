@@ -87,6 +87,12 @@ html, body {
 			width: 50%;
 			padding-top: 0;
 			text-align: center;
+
+			&.current-page {
+				font-weight: bolder;
+				border-bottom: white solid 3px;
+
+			}
 			
 			&:hover {
 				transition: 0.5s;
@@ -105,6 +111,8 @@ html, body {
 			&-link {
 				text-decoration: none;
 				color: #E1E1E1;	
+
+				
 			}
 		}
   }  

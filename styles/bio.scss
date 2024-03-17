@@ -4,7 +4,6 @@
 
 $tablet-margin: 0 2.25rem;
 $padding-abhealine: 3rem 0 2.25rem 0;
-
 $desktop-margin: 0 7rem;
 
 * {
@@ -18,6 +17,7 @@ html, body {
 	width: 100%;
 	font-family: 'Avenir';
 }
+
 
 button {
 	@include button;
@@ -223,7 +223,15 @@ button {
 // 	background: coral;
 // }
 .comment {
-	padding: 0 1rem;
+	@include mobile-side-padding;
+
+	@include tablet {
+		@include tablet-padding
+	}
+
+	@include desktop {
+		@include desktop-padding;
+	}
 	&-section {
 		display: flex;
 	}
@@ -246,12 +254,30 @@ button {
 			margin: 0;
 		}
 	}
+
+	&-wrapper {
+		@include tablet {
+			@include tablet-padding-forms
+		}
+		@include desktop {
+			@include desktop-padding-form
+		}
+	}
 }
+
 
 .form {
 	display: flex;
 	flex-direction: row;
 	font-size: 13px;
+
+	@include tablet {
+		@include tablet-padding-forms;
+	}
+
+	@include desktop {
+		@include desktop-padding-form
+	}
 
 	&-text {
 		height: 6rem;
