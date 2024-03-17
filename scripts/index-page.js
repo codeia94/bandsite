@@ -3,6 +3,15 @@ const button = document.querySelector(".form-container__button");
 const form = document.getElementById("form");
 const commentWrapper = document.querySelector(".comment-wrapper");
 
+const currentDate = new Date();
+
+const currentDay = currentDate.getDate();
+const currentMonth = currentDate.getMonth();
+const currentYear = currentDate.getFullYear();
+
+const dateString = currentDay + "/" + (currentMonth + 1) + "/" + currentYear;
+
+console.log(dateString);
 
 
 //Array of objects
@@ -70,16 +79,11 @@ function showComments(comment) {
 }
 
 
-// function renderComments() {
 
-// 	commentWrapper.innerHTML = "";
-// 	comments.forEach((comment) => {
-// 		showComments(comment);
-// 	})
-// }
-
+// REVIEW THIS FUNCTION
 function renderComments(numberComments = 3) {
 	commentWrapper.innerHTML = "";
+
 
 	const lastThreeComments = comments.slice(-numberComments);
 
@@ -103,7 +107,7 @@ form.addEventListener("submit",(e) => {
 
 	const newComment = {
 		name: commenterName,
-		date: new Date().toLocaleDateString(),
+		date: dateString,
 		comment: commenterComment,
 	};
 
@@ -121,18 +125,4 @@ form.addEventListener("submit",(e) => {
 //Parent element
 // const commentWrapper = document.querySelector(".comment-wrapper");
 
-// console.log(commentWrapper);
-
-
-
-// function renderComments() {
-
-// 	commentWrapper.innerHTML = "";
-// 	comments.forEach((comment) => {
-// 		showComments(comment);
-// 	})
-// }
-
-
-// console.log(commentWrapper);
 
