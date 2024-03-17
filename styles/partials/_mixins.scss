@@ -14,6 +14,8 @@
   }
 }
 
+
+//Mobile mixins
 @mixin bold-header_mobile {
 	font-size: 1.5rem;
 	line-height: 2rem;
@@ -27,6 +29,36 @@
 }
 
 
+@mixin mobile-page-header {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 700;
+}
+
+@mixin mobile-section-header {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 700;
+}
+
+@mixin mobile-subheader {
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 600;
+}
+
+@mixin mobile-body-copy {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 400;
+}
+
+
+@mixin mobile-side-padding {
+	padding: 0 1rem;
+}
+
+//Tablet mixins
 @mixin tablet-subheader_text {
 	font-size: 24px;
 	line-height: 32px;
@@ -38,30 +70,15 @@
 	flex-direction: column;
 }
 
-@mixin mobile-body-copy {
-	font-size: 13px;
-	line-height: 18px;
-	font-weight: 400;
-}
-
 @mixin button {
 	height: 2.5rem;
 	background-color: #323232;
 	color: white;
 	border-radius: 4px;
 }
-
-
 
 @mixin hr {
 	border-top: 1px solid #AFAFAF;
 	margin-top: 1rem;
 	width: 100%;
-}
-
-@mixin button {
-	height: 2.5rem;
-	background-color: #323232;
-	color: white;
-	border-radius: 4px;
 }

@@ -61,11 +61,20 @@ hr {
 }
 
 .main {
-  padding: 0 16px;
+  padding: 0 1rem;
+}
+.main-header__title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
 }
 
-.show {
-  width: 100%;
+.show-label {
+  font-weight: bolder;
+  color: #afafaf;
+}
+.show-date {
+  font-weight: 700;
 }
 .show-info {
   display: block;

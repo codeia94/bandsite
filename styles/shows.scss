@@ -52,11 +52,20 @@ hr {
 }
 
 .main {
-	padding: 0 16px;
+	@include mobile-side-padding;
+	&-header__title {
+		@include mobile-section-header
+	}
 }
 
 .show {
-	width: 100%;
+	&-label {
+		font-weight: bolder;
+		color: #afafaf;
+	}
+	&-date {
+		font-weight: 700;
+	}
 
 	&-info {
 		display: block;
@@ -67,6 +76,7 @@ hr {
 		&__loc {
 			@include tablet-showlist-display;
 			padding-bottom: 1rem;
+
 			}
 		}
 	
