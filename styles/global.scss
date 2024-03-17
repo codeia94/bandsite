@@ -110,45 +110,96 @@ html, body {
   }  
 }
 
-.banner {
-  background-image: linear-gradient(0deg, rgba(50, 50, 50, 0.438), rgba(50, 50, 50, 0.500)), url(../assets/images/hero-bio.jpg);
-  background-blend-mode: overlay #323232 ;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-	align-items: center;  
-  height: 240px;
-	
-	
+
+
+
+
+
+
+
+footer {
+	background-color: #323232;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	padding: .75rem;
+
 	@include tablet {
-		height: 560px;
+		padding: 0;
+	}
+}
+
+.footer {
+	background-color: #323232;
+	@include tablet {
+		display: flex;
+		flex-direction: column;
+		margin: $tablet-margin;
+		box-sizing: border-box;
+		position: relative;
+		padding: 2.25rem 0 2.25rem 0;
+	}
+	@include desktop {
+		margin: $desktop-margin;
 	}
 
-  &-container {
-		// @include bold-header_mobile;
-    color: white;
-		padding: 0 16px;
+	&-top {
+		@include tablet {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+
+	&-title {
+		@include tablet-subheader_text;
+	}
+
+	&-social {
+		@include tablet {
+			padding-left: 2rem;
+		}
+
+		&__logo {
+			padding-right: 2rem;
+			height: 1.5rem;
+		}
+	}
+	&-contact {
+		font-size: .8125rem;
+		line-height: 1.125rem;
 
 		@include tablet {
-			// padding: $tablet-padding;
-			margin: $tablet-margin;
-			padding: 0;
+			font-size: .875rem;
+			line-height: 1.25rem;
+			font-weight: 400;
 		}
-
 		@include desktop {
-			margin: $desktop-margin;
+			display: flex;
+			flex-direction: column;
+			width: 65%;
 		}
 
-		&__title {
-			font-size: 24px;
-			line-height: 32px;
-			font-weight: 700;
+		&__details {
+			padding-bottom: 2rem;
 
 			@include tablet {
-				font-size: 60px;
-				line-height: 68px;
-				font-weight: 700;
+				display: flex;
+				justify-content: space-between;
 			}
 		}
-  }
+	}
+	&-logo {
+		@include tablet {
+			box-sizing: border-box;
+			position: absolute;
+			top: 4.3rem;
+			right: 0;
+		}
+	}
+	&-copyright {
+		font-size: .8125rem;
+		line-height: 1.125rem;
+
+	}
 }

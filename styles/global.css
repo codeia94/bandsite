@@ -117,44 +117,94 @@ html, body {
   color: #E1E1E1;
 }
 
-.banner {
-  background-image: linear-gradient(0deg, rgba(50, 50, 50, 0.438), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-bio.jpg);
-  background-blend-mode: overlay #323232;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  height: 240px;
-}
-@media screen and (min-width: 768px) {
-  .banner {
-    height: 560px;
-  }
-}
-.banner-container {
+footer {
+  background-color: #323232;
   color: white;
-  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
 }
 @media screen and (min-width: 768px) {
-  .banner-container {
-    margin: 0 2.25rem;
+  footer {
     padding: 0;
   }
 }
+
+.footer {
+  background-color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2.25rem;
+    box-sizing: border-box;
+    position: relative;
+    padding: 2.25rem 0 2.25rem 0;
+  }
+}
 @media screen and (min-width: 1280px) {
-  .banner-container {
+  .footer {
     margin: 0 7rem;
   }
 }
-.banner-container__title {
+@media screen and (min-width: 768px) {
+  .footer-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.footer-title {
   font-size: 24px;
   line-height: 32px;
-  font-weight: 700;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
-  .banner-container__title {
-    font-size: 60px;
-    line-height: 68px;
-    font-weight: 700;
+  .footer-social {
+    padding-left: 2rem;
   }
+}
+.footer-social__logo {
+  padding-right: 2rem;
+  height: 1.5rem;
+}
+.footer-contact {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media screen and (min-width: 768px) {
+  .footer-contact {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+  }
+}
+.footer-contact__details {
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer-contact__details {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-logo {
+    box-sizing: border-box;
+    position: absolute;
+    top: 4.3rem;
+    right: 0;
+  }
+}
+.footer-copyright {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
 }/*# sourceMappingURL=global.css.map */
