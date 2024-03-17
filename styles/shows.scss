@@ -1,0 +1,82 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/typography' as *;
+
+$tablet-margin: 0 2.25rem;
+$padding-abhealine: 3rem 0 2.25rem 0;
+
+$desktop-margin: 0 7rem;
+
+* {
+    box-sizing: border-box;
+		// outline: .0625rem dashed red;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+	width: 100%;
+	font-family: 'Avenir';
+}
+
+button {
+	@include button;
+	width: 100%
+}
+
+hr {
+	@include hr;
+}
+
+.banner {
+  background-image: linear-gradient(0deg, rgba(50, 50, 50, 0.438), rgba(50, 50, 50, 0.500)), url(../assets/images/hero-shows.jpg);
+  background-blend-mode: overlay #323232 ;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+	align-items: center;  
+  height: auto;
+	box-sizing: border-box;
+	padding-bottom: 2rem;
+
+
+	&-container {
+		// @include bold-header_mobile;
+    color: white;
+		padding: 0 16px;
+
+		&__music {
+			box-sizing: border-box;
+		}
+	}
+}
+
+.main {
+	padding: 0 16px;
+}
+
+.show {
+	width: 100%;
+
+	&-info {
+		display: block;
+		@include mobile-body-copy;
+
+		&__date,
+		&__venue,
+		&__loc {
+			@include tablet-showlist-display;
+			padding-bottom: 1rem;
+			}
+		}
+	
+	&-button {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		
+	}
+}
+
+
+

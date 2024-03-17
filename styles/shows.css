@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirSemibold";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirBolder";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Avenir";
+}
+
+button {
+  height: 2.5rem;
+  background-color: #323232;
+  color: white;
+  border-radius: 4px;
+  width: 100%;
+}
+
+hr {
+  border-top: 1px solid #AFAFAF;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.banner {
+  background-image: linear-gradient(0deg, rgba(50, 50, 50, 0.438), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-shows.jpg);
+  background-blend-mode: overlay #323232;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  padding-bottom: 2rem;
+}
+.banner-container {
+  color: white;
+  padding: 0 16px;
+}
+.banner-container__music {
+  box-sizing: border-box;
+}
+
+.main {
+  padding: 0 16px;
+}
+
+.show {
+  width: 100%;
+}
+.show-info {
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.show-info__date, .show-info__venue, .show-info__loc {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+.show-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=shows.css.map */

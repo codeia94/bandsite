@@ -33,3 +33,35 @@
 	font-weight: 600;
 }
 
+@mixin tablet-showlist-display {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin mobile-body-copy {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 400;
+}
+
+@mixin button {
+	height: 2.5rem;
+	background-color: #323232;
+	color: white;
+	border-radius: 4px;
+}
+
+
+
+@mixin hr {
+	border-top: 1px solid #AFAFAF;
+	margin-top: 1rem;
+	width: 100%;
+}
+
+@mixin button {
+	height: 2.5rem;
+	background-color: #323232;
+	color: white;
+	border-radius: 4px;
+}
