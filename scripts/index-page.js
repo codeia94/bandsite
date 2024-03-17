@@ -1,7 +1,5 @@
 
 const button = document.querySelector(".form-container__button");
-// const commenterName = document.getElementById("#name");
-// const commenterComment = document.getElementById("#comment");
 const form = document.getElementById("form");
 const commentWrapper = document.querySelector(".comment-wrapper");
 
@@ -29,13 +27,7 @@ const comments = [
 console.log(comments);
 
 
-function renderComments() {
 
-	commentWrapper.innerHTML = "";
-	comments.forEach((comment) => {
-		showComments(comment);
-	})
-}
 
 //function to showcomments 
 function showComments(comment) {
@@ -78,17 +70,40 @@ function showComments(comment) {
 }
 
 
+// function renderComments() {
+
+// 	commentWrapper.innerHTML = "";
+// 	comments.forEach((comment) => {
+// 		showComments(comment);
+// 	})
+// }
+
+function renderComments(numberComments = 3) {
+	commentWrapper.innerHTML = "";
+
+	const lastThreeComments = comments.slice(-numberComments);
+
+	lastThreeComments.forEach((comment) => {
+		showComments(comment);
+	});
+}
+
+renderComments();
+
+
 form.addEventListener("submit",(e) => {
 	e.preventDefault();
 
 	const commenterName = document.querySelector(".form-name").value;
 	const commenterComment = document.querySelector(".form-text").value;
+	
 
 	console.log(commenterName);
 	console.log(commenterComment);
 
 	const newComment = {
 		name: commenterName,
+		date: new Date().toLocaleDateString(),
 		comment: commenterComment,
 	};
 
@@ -101,7 +116,6 @@ form.addEventListener("submit",(e) => {
 
 });
 
-renderComments();
 
 
 //Parent element
