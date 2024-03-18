@@ -14,7 +14,7 @@ const dateString = currentDay + "/" + (currentMonth + 1) + "/" + currentYear;
 console.log(dateString);
 
 
-//Array of objects
+
 const comments = [
 	{
 		name: "Victor Pinto",
@@ -38,15 +38,12 @@ console.log(comments);
 
 
 
-//function to showcomments 
+
 function showComments(comment) {
 	
 	const commentContainer = document.createElement("div");
-	//2a. add any classes/attributes
 	commentContainer.classList.add("comment-section");
 
-	
-	//2b. add any content
 	const commentImage = document.createElement("img");
 	commentImage.classList.add("comment-image");
 	commentImage.setAttribute("src", "assets/images/Photo-gallery-1.jpg");
@@ -73,33 +70,35 @@ function showComments(comment) {
 
 	const line = document.createElement("hr");
 
-	//3. append to parent 
 	commentWrapper.appendChild(commentContainer);
 	commentWrapper.appendChild(line);
 }
 
 
-
-// REVIEW THIS FUNCTION
+// Function to render 3 comment on the webpage
 function renderComments(numberComments = 3) {
+
 	commentWrapper.innerHTML = "";
 
+	let threeComments = comments.length - numberComments;
+	if (threeComments < 0) {
+		threeComments = 0;
+	}
 
-	const lastThreeComments = comments.slice(-numberComments);
-
-	lastThreeComments.forEach((comment) => {
-		showComments(comment);
-	});
+	for (let i = threeComments; i < comments.length; i++) {
+			const comment = comments[i];
+			showComments(comment);
+	}
 }
 
-renderComments();
+renderComments(3);
 
 
 form.addEventListener("submit",(e) => {
 	e.preventDefault();
 
-	const commenterName = document.querySelector(".form-name").value;
-	const commenterComment = document.querySelector(".form-text").value;
+	const commenterName = document.getElementById("form-name").value;
+	const commenterComment = document.getElementById("form-text").value;
 	
 
 	console.log(commenterName);
@@ -111,18 +110,15 @@ form.addEventListener("submit",(e) => {
 		comment: commenterComment,
 	};
 
+	comments.unshift(newComment);
 	comments.push(newComment);
+	
+	renderComments(3);
 
-	renderComments();
-
-	document.querySelector(".form-name").value = "";
-	document.querySelector(".form-text").value = "";
+	document.getElementById("form-name").value = "";
+	document.getElementById("form-text").value = "";
 
 });
 
-
-
-//Parent element
-// const commentWrapper = document.querySelector(".comment-wrapper");
 
 

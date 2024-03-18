@@ -18,6 +18,9 @@ html, body {
 	font-family: 'Avenir';
 }
 
+hr {
+	@include hr;
+}
 
 button {
 	@include button;

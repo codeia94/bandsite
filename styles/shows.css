@@ -32,7 +32,6 @@ button {
   background-color: #323232;
   color: white;
   border-radius: 4px;
-  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -52,13 +51,45 @@ hr {
   height: auto;
   box-sizing: border-box;
   padding-bottom: 2rem;
+  width: 100%;
 }
 .banner-container {
   color: white;
   padding: 0 16px;
 }
+@media screen and (min-width: 768px) {
+  .banner-container {
+    padding: 0 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .banner-container {
+    padding: 0 112px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner-container__subtitle {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner-container__title {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+  }
+}
 .banner-container__music {
   box-sizing: border-box;
+}
+@media screen and (min-width: 1280px) {
+  .banner-container__music {
+    padding-left: 15rem;
+  }
 }
 
 .main {
@@ -68,6 +99,25 @@ hr {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    padding: 0 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main {
+    padding: 0 112px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-header__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+  }
 }
 
 .show-label {
@@ -83,13 +133,39 @@ hr {
   line-height: 18px;
   font-weight: 400;
 }
+.show-info:hover {
+  background-color: #fafafa;
+}
+.show-info.active {
+  background-color: #e1e1e1;
+}
 .show-info__date, .show-info__venue, .show-info__loc {
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .show-info {
+    display: flex;
+  }
+}
 .show-button {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .show-button {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .show {
+    width: 100%;
+    padding: 2rem 3rem 1rem;
+  }
+}
+
+.show-info > * {
+  flex: 1;
 }/*# sourceMappingURL=shows.css.map */

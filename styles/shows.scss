@@ -38,15 +38,42 @@ hr {
   height: auto;
 	box-sizing: border-box;
 	padding-bottom: 2rem;
-
+	width: 100%;
 
 	&-container {
 		// @include bold-header_mobile;
     color: white;
 		padding: 0 16px;
 
+		@include tablet {
+			@include tablet-padding;
+		}
+
+		@include desktop {
+			@include desktop-padding;
+			display: flex;
+			align-items: center;
+		}
+
+		&__subtitle {
+			@include tablet {
+				@include tablet-section-header;
+			}
+		}
+
+
+		&__title {
+			@include tablet {
+				@include tablet-page-header;
+			}
+		}
+
 		&__music {
 			box-sizing: border-box;
+
+			@include desktop {
+				padding-left: 15rem;
+			}
 		}
 	}
 }
@@ -55,6 +82,24 @@ hr {
 	@include mobile-side-padding;
 	&-header__title {
 		@include mobile-section-header
+	}
+
+	@include tablet {
+		@include tablet-padding;
+	}
+
+	@include desktop {
+		@include desktop-padding;
+		display: flex;
+		flex-direction: row;
+	}
+
+	&-header {
+		&__title {
+			@include desktop {
+				@include tablet-section-header;
+			}
+		}
 	}
 }
 
@@ -67,8 +112,19 @@ hr {
 		font-weight: 700;
 	}
 
+	
+
 	&-info {
 		display: block;
+
+		&:hover {
+			background-color: #fafafa
+		}
+
+		&.active {
+			background-color: #e1e1e1;
+		}
+		
 		@include mobile-body-copy;
 
 		&__date,
@@ -76,7 +132,10 @@ hr {
 		&__loc {
 			@include tablet-showlist-display;
 			padding-bottom: 1rem;
+			}
 
+			@include tablet {
+				display: flex;
 			}
 		}
 	
@@ -84,9 +143,19 @@ hr {
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		
+
+		@include tablet {
+			width: 20%;
+		}
+	}
+
+	@include desktop {
+		width: 100%;
+		padding: 2rem 3rem 1rem;
 	}
 }
 
 
-
+.show-info > * {
+	flex: 1;
+}
