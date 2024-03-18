@@ -124,3 +124,6 @@ showInfo.forEach(showInfoActive => {
 		showInfoActive.classList.add("active");
 	})
 });
+
+
+const removeLabel = document.querySelectorAll(".show-label");
