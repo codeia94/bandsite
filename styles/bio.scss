@@ -4,7 +4,6 @@
 
 $tablet-margin: 0 2.25rem;
 $padding-abhealine: 3rem 0 2.25rem 0;
-
 $desktop-margin: 0 7rem;
 
 * {
@@ -18,6 +17,7 @@ html, body {
 	font-family: 'Avenir';
 }
 
+<<<<<<< HEAD
 .site-header {
   background: #323232;
 	padding-top: 16px;
@@ -105,6 +105,14 @@ html, body {
 			}
 		}
   }  
+=======
+hr {
+	@include hr;
+}
+
+button {
+	@include button;
+>>>>>>> sprint-2
 }
 
 .banner {
@@ -193,14 +201,10 @@ html, body {
 		}
 
     &-image {
-      // position: relative;
-      // width: 100%;
 
       &__img {
-				// position: absolute;
       	width: 100%;
         height: 100%;
-				// display: block;
       }
     }
   }
@@ -301,6 +305,7 @@ html, body {
 	}
 }
 
+<<<<<<< HEAD
 // Form
 
 .site-form {
@@ -340,83 +345,106 @@ footer {
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
+=======
+.comment {
+	@include mobile-side-padding;
+>>>>>>> sprint-2
 
 	@include tablet {
-		padding: 0;
+		@include tablet-padding
+	}
+
+	@include desktop {
+		@include desktop-padding;
+	}
+	&-section {
+		display: flex;
+	}
+	&-image {
+		max-width: 2.25rem;
+		max-height: 2.25rem;
+		border-radius: 50%;
+		margin-top: 1rem;
+	}
+	&-new {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		font-size: 13px;
+		padding-left: 1rem;
+		justify-content: space-between;
+
+		&__comment {
+			margin: 0;
+		}
+	}
+
+	&-wrapper {
+		@include tablet {
+			@include tablet-padding-forms
+		}
+		@include desktop {
+			@include desktop-padding-form
+		}
 	}
 }
 
-.footer {
-	background-color: #323232;
+
+.form {
+	display: flex;
+	flex-direction: row;
+	font-size: 13px;
+
 	@include tablet {
+		@include tablet-padding-forms;
+	}
+
+	@include desktop {
+		@include desktop-padding-form
+	}
+
+	&-text {
+		height: 6rem;
+	}
+
+	&-image {
+		max-width: 2.25rem;
+		max-height: 2.25rem;
+		border-radius: 50%;
+		margin-top: 1.375rem;
+	}
+	&-container {
 		display: flex;
 		flex-direction: column;
-		margin: $tablet-margin;
-		box-sizing: border-box;
-		position: relative;
-		padding: 2.25rem 0 2.25rem 0;
-	}
-	@include desktop {
-		margin: $desktop-margin;
-	}
+		width: 100%;
+		padding-left: 16px;
 
-	&-top {
-		@include tablet {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
+		&__item {
+			color: #AFAFAF;
+			line-height: 1.125rem;
+			font-weight: 600;
 		}
-	}
+		&__text {
+			margin:.25rem 0 1rem;
+			min-height: 36px;
+			border-radius: 4px;
+			border-color: rgba(225, 225, 225);
+			border-width: 1px;
+			padding: .75rem;
+			width: 100%;
+			resize: none;
+			font-family: 'Avenir';
 
-	&-title {
-		@include tablet-subheader_text;
-	}
-
-	&-social {
-		@include tablet {
-			padding-left: 2rem;
-		}
-
-		&__logo {
-			padding-right: 2rem;
-			height: 1.5rem;
-		}
-	}
-	&-contact {
-		font-size: .8125rem;
-		line-height: 1.125rem;
-
-		@include tablet {
-			font-size: .875rem;
-			line-height: 1.25rem;
-			font-weight: 400;
-		}
-		@include desktop {
-			display: flex;
-			flex-direction: column;
-			width: 65%;
-		}
-
-		&__details {
-			padding-bottom: 2rem;
-
-			@include tablet {
-				display: flex;
-				justify-content: space-between;
+			// Active state not working
+			&:active {
+				border-color: red !important;
 			}
 		}
 	}
-	&-logo {
-		@include tablet {
-			box-sizing: border-box;
-			position: absolute;
-			top: 4.3rem;
-			right: 0;
-		}
-	}
-	&-copyright {
-		font-size: .8125rem;
-		line-height: 1.125rem;
-
-	}
 }
+
+
+
+
+

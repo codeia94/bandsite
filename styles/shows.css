@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirSemibold";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirBolder";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Avenir";
+}
+
+button {
+  height: 2.5rem;
+  background-color: #323232;
+  color: white;
+  border-radius: 4px;
+  width: 100%;
+}
+
+hr {
+  border-top: 1px solid #AFAFAF;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.banner {
+  background-image: linear-gradient(0deg, rgba(50, 50, 50, 0.438), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-shows.jpg);
+  background-blend-mode: overlay #323232;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+.banner-container {
+  color: white;
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .banner-container {
+    padding: 0 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .banner-container {
+    padding: 0 112px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner-container__subtitle {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner-container__title {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+  }
+}
+.banner-container__music {
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1280px) {
+  .banner-container__music {
+    padding-left: 15rem;
+  }
+}
+
+.main {
+  padding: 0 1rem;
+}
+.main-header__title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    padding: 0 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main {
+    padding: 0 112px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-header__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+  }
+}
+
+.show-label {
+  font-weight: bolder;
+  color: #afafaf;
+}
+.show-date {
+  font-weight: 700;
+}
+.show-info {
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.show-info:hover {
+  background-color: #fafafa;
+}
+.show-info.active {
+  background-color: #e1e1e1;
+}
+.show-info__date, .show-info__venue, .show-info__loc {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .show-info {
+    display: flex;
+  }
+}
+.show-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .show-button {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .show {
+    width: 100%;
+    padding: 2rem 3rem 1rem;
+  }
+}
+
+.show-info > * {
+  flex: 1;
+}/*# sourceMappingURL=shows.css.map */

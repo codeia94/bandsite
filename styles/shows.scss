@@ -1,0 +1,161 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/typography' as *;
+
+$tablet-margin: 0 2.25rem;
+$padding-abhealine: 3rem 0 2.25rem 0;
+
+$desktop-margin: 0 7rem;
+
+* {
+    box-sizing: border-box;
+		// outline: .0625rem dashed red;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+	width: 100%;
+	font-family: 'Avenir';
+}
+
+button {
+	@include button;
+	width: 100%
+}
+
+hr {
+	@include hr;
+}
+
+.banner {
+  background-image: linear-gradient(0deg, rgba(50, 50, 50, 0.438), rgba(50, 50, 50, 0.500)), url(../assets/images/hero-shows.jpg);
+  background-blend-mode: overlay #323232 ;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+	align-items: center;  
+  height: auto;
+	box-sizing: border-box;
+	padding-bottom: 2rem;
+	width: 100%;
+
+	&-container {
+		// @include bold-header_mobile;
+    color: white;
+		padding: 0 16px;
+
+		@include tablet {
+			@include tablet-padding;
+		}
+
+		@include desktop {
+			@include desktop-padding;
+			display: flex;
+			align-items: center;
+		}
+
+		&__subtitle {
+			@include tablet {
+				@include tablet-section-header;
+			}
+		}
+
+
+		&__title {
+			@include tablet {
+				@include tablet-page-header;
+			}
+		}
+
+		&__music {
+			box-sizing: border-box;
+
+			@include desktop {
+				padding-left: 15rem;
+			}
+		}
+	}
+}
+
+.main {
+	@include mobile-side-padding;
+	&-header__title {
+		@include mobile-section-header
+	}
+
+	@include tablet {
+		@include tablet-padding;
+	}
+
+	@include desktop {
+		@include desktop-padding;
+		display: flex;
+		flex-direction: row;
+	}
+
+	&-header {
+		&__title {
+			@include desktop {
+				@include tablet-section-header;
+			}
+		}
+	}
+}
+
+.show {
+	&-label {
+		font-weight: bolder;
+		color: #afafaf;
+	}
+	&-date {
+		font-weight: 700;
+	}
+
+	
+
+	&-info {
+		display: block;
+
+		&:hover {
+			background-color: #fafafa
+		}
+
+		&.active {
+			background-color: #e1e1e1;
+		}
+		
+		@include mobile-body-copy;
+
+		&__date,
+		&__venue,
+		&__loc {
+			@include tablet-showlist-display;
+			padding-bottom: 1rem;
+			}
+
+			@include tablet {
+				display: flex;
+			}
+		}
+	
+	&-button {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		@include tablet {
+			width: 20%;
+		}
+	}
+
+	@include desktop {
+		width: 100%;
+		padding: 2rem 3rem 1rem;
+	}
+}
+
+
+.show-info > * {
+	flex: 1;
+}

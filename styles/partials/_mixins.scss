@@ -14,6 +14,8 @@
   }
 }
 
+
+//Mobile mixins
 @mixin bold-header_mobile {
 	font-size: 1.5rem;
 	line-height: 2rem;
@@ -27,9 +29,94 @@
 }
 
 
+@mixin mobile-page-header {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 700;
+}
+
+@mixin mobile-section-header {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 700;
+}
+
+@mixin mobile-subheader {
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 600;
+}
+
+@mixin mobile-body-copy {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 400;
+}
+
+
+@mixin mobile-side-padding {
+	padding: 0 1rem;
+}
+
+//Tablet mixins
 @mixin tablet-subheader_text {
 	font-size: 24px;
 	line-height: 32px;
 	font-weight: 600;
+}
+
+@mixin tablet-showlist-display {
+	display: flex;
+	flex-direction: column;
+}
+
+
+@mixin tablet-page-header {
+	font-size: 60px;
+	line-height: 68px;
+	font-weight: 700;
+}
+
+@mixin tablet-section-header {
+	font-size: 36px;
+	line-height: 44px;
+	font-weight: 600;
+}
+
+@mixin tablet-padding {
+	padding: 0 36px;
+}
+
+@mixin tablet-padding-forms {
+	padding: 0 36px;
+}
+
+
+//DESKTOP MIXINS
+
+@mixin desktop-padding {
+	padding: 0 112px;
+}
+
+@mixin desktop-padding-form {
+	padding: 0 170px;
+}
+
+
+
+@mixin button {
+	height: 2.5rem;
+	background-color: #323232;
+	color: white;
+	border-radius: 4px;
+	// margin-bottom: 1rem;
+}
+
+//DOESNT WORK
+
+@mixin hr {
+	border-top: 1px solid #AFAFAF;
+	margin-top: 1rem;
+	width: 100%;
 }
 
