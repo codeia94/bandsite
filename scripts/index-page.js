@@ -44,6 +44,7 @@ function showComments(comment) {
 	const commentContainer = document.createElement("div");
 	commentContainer.classList.add("comment-section");
 
+	
 	const commentImage = document.createElement("img");
 	commentImage.classList.add("comment-image");
 	commentImage.setAttribute("src", "assets/images/Photo-gallery-1.jpg");
