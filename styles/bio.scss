@@ -17,102 +17,12 @@ html, body {
 	font-family: 'Avenir';
 }
 
-<<<<<<< HEAD
-.site-header {
-  background: #323232;
-	padding-top: 16px;
-	
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 47.9375rem;
-
-    @include tablet {
-      flex-direction: row;
-			margin: $tablet-margin;
-    }
-
-		@include desktop {
-			margin: $desktop-margin;
-		}
-  }
-}
-
-.site-logo {
-	max-width: 7.5rem;
-	max-height: 1.25rem;
-	@include tablet {
-		max-width: 7.5rem;
-		max-height: 1.25rem;
-	}
-	&__bandsite {
-		max-width: 7.5rem;
-		max-height: 1.25rem;
-	}
-}
-
-.nav-list__item-link {
-  color: white;
-  text-decoration: none;
-  display: inline-flex;
-}
-
-.nav-font {
-	font-weight: 100;
-}
-
-.nav {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-
-  &-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    justify-content: space-evenly;
-		margin: 0;
-
-		@include tablet {
-      display: flex;
-			justify-content: flex-start;
-			padding-left: 3rem;
-    }
-
-		&__item {
-			width: 50%;
-			padding-top: 0;
-			text-align: center;
-			
-			&:hover {
-				transition: 0.5s;
-				transition-timing-function: ease;
-				border-bottom: white solid 3px;
-				color: white;
-				font-weight: bold;
-			}
-
-			@include tablet {
-				width: auto;
-				margin-right: 32px;
-			}
-
-			&-link {
-				text-decoration: none;
-				color: #E1E1E1;	
-			}
-		}
-  }  
-=======
 hr {
 	@include hr;
 }
 
 button {
 	@include button;
->>>>>>> sprint-2
 }
 
 .banner {
@@ -305,50 +215,8 @@ button {
 	}
 }
 
-<<<<<<< HEAD
-// Form
-
-.site-form {
-	padding: 0 1rem;
-}
-
-.form {
-	display: flex;
-
-	&-image {
-		max-width: 2.25rem;
-		max-height: 2.25rem;
-		border-radius: 50%;
-	}
-
-	&-comment {
-		display: flex;
-		flex-direction: column;
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-footer {
-	background-color: #323232;
-	color: white;
-	display: flex;
-	flex-direction: column;
-	padding: 1rem;
-=======
 .comment {
 	@include mobile-side-padding;
->>>>>>> sprint-2
 
 	@include tablet {
 		@include tablet-padding
