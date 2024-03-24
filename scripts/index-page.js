@@ -1,4 +1,4 @@
-import { BandSiteApi } from "./band-site-api";
+import { BandSiteApi } from "./band-site-api.js";
 
 
 const commentApi = new BandSiteApi("https://unit-2-project-api-25c1595833b2.herokuapp.com", "c4ed86e4-2e15-47f8-9a54-9cbadb76c6e6");
@@ -81,21 +81,14 @@ function showComments(comment) {
 }
 
 
-let comments = [];
+// let comments = [];
 
 //function to take data from api response to display on page
-commentApi.getComment().then(fetchComments => {
-	fetchComments.forEach(comment => ({
-			name: comment.name,
-			comment: comment.comment
-	}));
-	comments.forEach(comment => {
-			showComments(comment);
-	});
+commentApi.getComment()
+	.then(fetchComments => {
+	comments = fetchComments;
 	renderComments(3);
 });
-
-
 
 
 // Function to render 3 comment on the webpage
@@ -106,7 +99,7 @@ function renderComments(numberComments = 3) {
 
 	let threeComments = comments.length - numberComments;
 	if (threeComments < 0) {
-		threeComments = 0;
+			threeComments = 0;
 	}
 
 	for (let i = threeComments; i < comments.length; i++) {
