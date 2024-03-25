@@ -14,6 +14,11 @@
   }
 }
 
+@mixin large-desktop {
+	@media screen and (min-width: $large-desktop-breakpoint) {
+		@content;
+	}
+}
 
 //Mobile mixins
 @mixin bold-header_mobile {
@@ -109,7 +114,7 @@
 	background-color: #323232;
 	color: white;
 	border-radius: 4px;
-	// margin-bottom: 1rem;
+	
 }
 
 //DOESNT WORK

@@ -23,6 +23,9 @@ hr {
 
 button {
 	@include button;
+	@include tablet {
+		width: 30%;
+	}
 }
 
 .banner {
@@ -227,6 +230,8 @@ button {
 	}
 	&-section {
 		display: flex;
+		width: 100%;
+		overflow-wrap: break-word;
 	}
 	&-image {
 		max-width: 2.25rem;
@@ -245,10 +250,15 @@ button {
 
 		&__comment {
 			margin: 0;
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+			white-space: pre-wrap;
+			overflow-wrap: break-word;
 		}
 	}
 
 	&-wrapper {
+		max-width: 100%;
 		@include tablet {
 			@include tablet-padding-forms
 		}
@@ -293,6 +303,11 @@ button {
 			line-height: 1.125rem;
 			font-weight: 600;
 		}
+
+		&__button {
+			margin-left: auto;
+		}
+
 		&__text {
 			margin:.25rem 0 1rem;
 			min-height: 36px;

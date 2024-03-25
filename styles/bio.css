@@ -39,6 +39,11 @@ button {
   color: white;
   border-radius: 4px;
 }
+@media screen and (min-width: 768px) {
+  button {
+    width: 30%;
+  }
+}
 
 .banner {
   background-image: linear-gradient(0deg, rgba(50, 50, 50, 0.438), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-bio.jpg);
@@ -245,6 +250,8 @@ button {
 }
 .comment-section {
   display: flex;
+  width: 100%;
+  overflow-wrap: break-word;
 }
 .comment-image {
   max-width: 2.25rem;
@@ -263,6 +270,13 @@ button {
 }
 .comment-new__comment {
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+.comment-wrapper {
+  max-width: 100%;
 }
 @media screen and (min-width: 768px) {
   .comment-wrapper {
@@ -309,6 +323,9 @@ button {
   color: #AFAFAF;
   line-height: 1.125rem;
   font-weight: 600;
+}
+.form-container__button {
+  margin-left: auto;
 }
 .form-container__text {
   margin: 0.25rem 0 1rem;

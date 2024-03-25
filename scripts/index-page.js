@@ -6,15 +6,15 @@ const button = document.querySelector(".form-container__button");
 const form = document.getElementById("form");
 const commentWrapper = document.querySelector(".comment-wrapper");
 
-const currentDate = new Date();
+// const currentDate = new Date();
 
-const currentDay = currentDate.getDate();
-const currentMonth = currentDate.getMonth();
-const currentYear = currentDate.getFullYear();
+// const currentDay = currentDate.getDate();
+// const currentMonth = currentDate.getMonth();
+// const currentYear = currentDate.getFullYear();
 
-const dateString = currentDay + "/" + (currentMonth + 1) + "/" + currentYear;
+// const dateString = currentDay + "/" + (currentMonth + 1) + "/" + currentYear;
 
-console.log(dateString);
+// console.log(dateString);
 
 function showComments(comment) {
 	
@@ -38,7 +38,7 @@ function showComments(comment) {
 
 	const dateComment = document.createElement("aside");
 	dateComment.classList.add("comment-new__date");
-	dateComment.textContent = comment.date;
+	dateComment.textContent = new Date(comment.timestamp).toLocaleDateString();
 	pastComment.appendChild(dateComment);
 
 	const newComment = document.createElement("p");
@@ -74,11 +74,12 @@ form.addEventListener("submit",async (e) => {
 	const commenterName = document.getElementById("form-name").value;
 	const commenterComment = document.getElementById("form-text").value;
 	const currentDate = new Date();
-	const dateString = currentDate.toLocaleDateString();
+	const timestamp = currentDate.getTime();
 
 	const newComment = {
 		name: commenterName,
 		comment: commenterComment,
+		date: timestamp,
 	};
 
 	try {
