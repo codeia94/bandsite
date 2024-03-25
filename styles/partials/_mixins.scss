@@ -14,11 +14,6 @@
   }
 }
 
-@mixin large-desktop {
-	@media screen and (min-width: $large-desktop-breakpoint) {
-		@content;
-	}
-}
 
 //Mobile mixins
 @mixin bold-header_mobile {

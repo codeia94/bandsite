@@ -6,16 +6,6 @@ const button = document.querySelector(".form-container__button");
 const form = document.getElementById("form");
 const commentWrapper = document.querySelector(".comment-wrapper");
 
-// const currentDate = new Date();
-
-// const currentDay = currentDate.getDate();
-// const currentMonth = currentDate.getMonth();
-// const currentYear = currentDate.getFullYear();
-
-// const dateString = currentDay + "/" + (currentMonth + 1) + "/" + currentYear;
-
-// console.log(dateString);
-
 function showComments(comment) {
 	
 	const commentContainer = document.createElement("div");
