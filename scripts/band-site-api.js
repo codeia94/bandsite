@@ -14,36 +14,38 @@ class BandSiteApi {
 
 	async getShow() {
 		try {
-				const url = `${this.baseUrl}/showdates?api_key=${this.apiKey}`;
+				const url = `${this.baseUrl}showdates?api_key=${this.apiKey}`;
 				const response = await axios.get(url);
 				console.log(response.data);
 				return response.data;
 		} catch (error) {
 				console.error("ERRRROR");
+				return [];
 		}
 	}
 
 	async getComment() {
 		try {
-			const url = `${this.baseUrl}/comments?api_key=${this.apiKey}`;
+			const url = `${this.baseUrl}comments?api_key=${this.apiKey}`;
 			const response = await axios.get(url);
+			console.log(response.data);
+			return response.data;
+		} catch (error) {
+			console.error("ERRRROR");
+			return [];
+		}
+	}
+
+	async postComment(comment) {
+		try {
+			const url = `${this.baseUrl}comments?api_key=${this.apiKey}`;
+			const response = await axios.post(url, comment);
 			console.log(response.data);
 			return response.data;
 		} catch (error) {
 			console.error("ERRRROR");
 		}
 	}
-
-	// async postComment(comment) {
-	// 	try {
-	// 		const url = `${this.baseUrl}/comments?api_key=${this.apiKey}`;
-	// 		const response = await axios.post(url, comment);
-	// 		console.log(response.data);
-	// 		return response.data;
-	// 	} catch (error) {
-	// 		console.error("ERRRROR");
-	// 	}
-	// }
 }
 
 

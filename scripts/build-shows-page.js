@@ -2,13 +2,10 @@
 // console.log(BandSiteApi);
 import { BandSiteApi } from './band-site-api.js';
 
-const showApi = new BandSiteApi("https://unit-2-project-api-25c1595833b2.herokuapp.com", "c4ed86e4-2e15-47f8-9a54-9cbadb76c6e6");
+const showApi = new BandSiteApi("https://unit-2-project-api-25c1595833b2.herokuapp.com/", "c4ed86e4-2e15-47f8-9a54-9cbadb76c6e6");
 
 
 const showWrapper = document.querySelector(".show");
-
-
-
 
 // const shows = 
 // [
@@ -119,7 +116,6 @@ function showList(show) {
 //function to take data from api response and display it on the page.
 
 showApi.getShow().then(shows => {
-	// Assuming showList is a function that takes a show object and displays it on the page
 	shows.forEach(show => {
 		showList(show);
 	});

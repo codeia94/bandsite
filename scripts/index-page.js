@@ -1,7 +1,6 @@
 import { BandSiteApi } from "./band-site-api.js";
 
-
-const commentApi = new BandSiteApi("https://unit-2-project-api-25c1595833b2.herokuapp.com", "c4ed86e4-2e15-47f8-9a54-9cbadb76c6e6");
+const commentApi = new BandSiteApi("https://unit-2-project-api-25c1595833b2.herokuapp.com/", "c4ed86e4-2e15-47f8-9a54-9cbadb76c6e6");
 console.log(commentApi);
 
 const button = document.querySelector(".form-container__button");
@@ -17,32 +16,6 @@ const currentYear = currentDate.getFullYear();
 const dateString = currentDay + "/" + (currentMonth + 1) + "/" + currentYear;
 
 console.log(dateString);
-
-
-// const comments = [
-// 	{
-// 		name: "Victor Pinto",
-// 		date: "11/02/2023",
-// 		comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-// 	},
-// 	{
-// 		name: "Christina Cabreba",
-// 		date: "10/28/2023",
-// 		comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-// 	},
-// 	{
-// 		name: "Isaac Tadesse",
-// 		date: "10/20/2023",
-// 		comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-// 	},
-// ];
-
-// console.log(comments);
-
-
-
-
-//Keep this array.
 
 function showComments(comment) {
 	
@@ -84,19 +57,37 @@ function showComments(comment) {
 // let comments = [];
 
 //function to take data from api response to display on page
-commentApi.getComment()
-	.then(fetchComments => {
-	comments = fetchComments;
-	renderComments(3);
-});
+// commentApi.getComment()
+// 	.then(fetchComments => {
+// 	comments = fetchComments;
+// 	renderComments(3);
+// });
 
 
 // Function to render 3 comment on the webpage
+// function renderComments(numberComments = 3) {
 
-function renderComments(numberComments = 3) {
+// 	commentWrapper.innerHTML = "";
 
+// 	let threeComments = comments.length - numberComments;
+// 	if (threeComments < 0) {
+// 			threeComments = 0;
+// 	}
+
+// 	for (let i = threeComments; i < comments.length; i++) {
+// 			const comment = comments[i];
+// 			showComments(comment);
+// 	}
+// }
+
+renderComments(3);
+
+let comments = [];
+
+//TEST CODE
+async function renderComments(numberComments = 3) {
+	const comments = await commentApi.getComment();
 	commentWrapper.innerHTML = "";
-
 	let threeComments = comments.length - numberComments;
 	if (threeComments < 0) {
 			threeComments = 0;
@@ -108,34 +99,34 @@ function renderComments(numberComments = 3) {
 	}
 }
 
-// renderComments(3);
-
 
 //Event listener for the form
-form.addEventListener("submit",(e) => {
+form.addEventListener("submit",async (e) => {
 	e.preventDefault();
 
 	const commenterName = document.getElementById("form-name").value;
 	const commenterComment = document.getElementById("form-text").value;
-	
-
-	console.log(commenterName);
-	console.log(commenterComment);
 
 	const newComment = {
 		name: commenterName,
-		date: dateString,
 		comment: commenterComment,
 	};
 
+	try {
+		await commentApi.postComment(newComment);
+	} catch (error) {
+		console.error("ERRRRRRRROR");
+	}
+
 	comments.unshift(newComment);
 	
-	renderComments(3);
-
+	renderComments();
 	document.getElementById("form-name").value = "";
 	document.getElementById("form-text").value = "";
 
 });
+
+// renderComments();
 
 
 
