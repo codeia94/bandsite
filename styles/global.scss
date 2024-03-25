@@ -90,7 +90,6 @@ html, body {
 			&.current-page {
 				font-weight: bolder;
 				border-bottom: white solid 3px;
-
 			}
 			
 			&:hover {
@@ -101,7 +100,6 @@ html, body {
 				font-weight: bold;
 			}
 
-
 			@include tablet {
 				width: auto;
 				margin-right: 32px;
@@ -110,8 +108,6 @@ html, body {
 			&-link {
 				text-decoration: none;
 				color: #E1E1E1;	
-
-				
 			}
 		}
   }  

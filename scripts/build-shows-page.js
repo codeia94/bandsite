@@ -1,55 +1,15 @@
-// import { BandSiteApi } from "./band-site-api.js";
-// console.log(BandSiteApi);
+
 import { BandSiteApi } from './band-site-api.js';
 
 const showApi = new BandSiteApi("https://unit-2-project-api-25c1595833b2.herokuapp.com/", "c4ed86e4-2e15-47f8-9a54-9cbadb76c6e6");
 
-
 const showWrapper = document.querySelector(".show");
-
-// const shows = 
-// [
-// 	{
-// 		date: "Mon Sept 09 2024",
-// 		venue: "Ronald Lane",
-// 		location: "San Francisco, CA",
-// 	},
-// 	{
-// 		date: "Tue Sept 17 2024",
-// 		venue: "Pier 3 East",
-// 		location: "San Francisco, CA",
-// 	},
-// 	{
-// 		date: "Sat Oct 12 2024",
-// 		venue: "View Lounge",
-// 		location: "San Francisco, CA",
-// 	},
-// 	{
-// 		date: "Sat Nov 16 2024",
-// 		venue: "Hyatt Agency",
-// 		location: "San Francisco, CA",
-// 	},
-// 	{
-// 		date: "Fri Nov 29 2024",
-// 		venue: "Moscow Center",
-// 		location: "San Francisco, CA",
-// 	},
-// 	{
-// 		date: "Wed Dec 18 2024",
-// 		venue: "Press Club",
-// 		location: "San Francisco, CA",
-// 	},
-// ];
-
-// console.log(shows);
-
 
 function showList(show) {
 	
 	const showContainer = document.createElement("div");
 	showContainer.classList.add("show-info");
 	
-	//Show Dates
 	const showDateInfo = document.createElement("div");
 	showDateInfo.classList.add("show-info__date");
 	showContainer.appendChild(showDateInfo);
@@ -61,10 +21,9 @@ function showList(show) {
 	
 	const showDate = document.createElement("span");
 	showDate.classList.add("span");
-	showDate.textContent = show.date;
+	showDate.textContent = new Date(show.date).toLocaleDateString();
 	showDateInfo.appendChild(showDate);
 	
-	//Show venue
 	const showVenueInfo = document.createElement("div");
 	showVenueInfo.classList.add("show-info__venue");
 	showContainer.appendChild(showVenueInfo);
@@ -79,8 +38,6 @@ function showList(show) {
 	showVenue.textContent = show.place;;
 	showVenueInfo.appendChild(showVenue);
 	
-	
-	//Show location
 	const showLocInfo = document.createElement("div");
 	showLocInfo.classList.add("show-info__loc");
 	showContainer.appendChild(showLocInfo);
@@ -95,7 +52,6 @@ function showList(show) {
 	showLoc.textContent = show.location;
 	showLocInfo.appendChild(showLoc);
 	
-	//Show Button
 	const showButton = document.createElement("div");
 	showButton.classList.add("show-button");
 	showContainer.appendChild(showButton);
@@ -107,7 +63,6 @@ function showList(show) {
 	
 	const line = document.createElement("hr");
 	
-	//Append to parent
 	showWrapper.appendChild(showContainer);
 	showWrapper.appendChild(line);
 	
