@@ -4,12 +4,10 @@
 
 $tablet-margin: 0 2.25rem;
 $padding-abhealine: 3rem 0 2.25rem 0;
-
 $desktop-margin: 0 7rem;
 
 * {
     box-sizing: border-box;
-		// outline: .0625rem dashed red;
 }
 
 html, body {
@@ -41,7 +39,6 @@ hr {
 	width: 100%;
 
 	&-container {
-		// @include bold-header_mobile;
     color: white;
 		padding: 0 16px;
 
@@ -155,7 +152,8 @@ hr {
 	}
 }
 
-
+//Selects all direct children of elements with class show-info
+//flex:1 makes all children of show-info the same width
 .show-info > * {
 	flex: 1;
 }

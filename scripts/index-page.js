@@ -48,8 +48,8 @@ function showComments(comment) {
 
 	const line = document.createElement("hr");
 
-	commentWrapper.appendChild(commentContainer);
-	commentWrapper.appendChild(line);
+	commentWrapper.prepend(commentContainer);
+	commentWrapper.prepend(line);
 }
 
 
@@ -74,11 +74,11 @@ form.addEventListener("submit",async (e) => {
 	const commenterName = document.getElementById("form-name").value;
 	const commenterComment = document.getElementById("form-text").value;
 	const currentDate = new Date();
+	const dateString = currentDate.toLocaleDateString();
 
 	const newComment = {
 		name: commenterName,
 		comment: commenterComment,
-		date: currentDate.toLocaleDateString()
 	};
 
 	try {

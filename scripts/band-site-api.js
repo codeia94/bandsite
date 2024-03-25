@@ -1,5 +1,5 @@
-// const apiKey = "c4ed86e4-2e15-47f8-9a54-9cbadb76c6e6";
-// const baseUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com/";
+const apiKey = "c4ed86e4-2e15-47f8-9a54-9cbadb76c6e6";
+const baseUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com/";
 
 class BandSiteApi {
 	constructor(baseUrl, apiKey) {
